@@ -72,6 +72,7 @@ function render() {
   app.innerHTML = view();
   updateTimers();
   holdHand();
+  setTurnGlow(S);
 
   // Keep the current picker visible in the turn-order bar (it scrolls sideways on small screens).
   const strip = app.querySelector(".order"), seat = strip?.querySelector(".seat.now");
@@ -217,6 +218,13 @@ app.addEventListener("click", e => {
     case "again": ctx.role === "solo" ? startSolo() : hostSend({ type: "again" }); break;
   }
 });
+
+// Screen-edge glow in 5-card pick: green on your turn, light red while someone else picks.
+const glow = document.getElementById("turnGlow");
+function setTurnGlow(S) {
+  const picking = S && S.mode === "draft" && S.phase === "play" && S.players?.[S.turn];
+  glow.dataset.turn = !picking ? "" : S.players[S.turn].id === ctx.myId ? "mine" : "other";
+}
 
 // While a pick animation plays, keep the next hand hidden; release it (with its deal-in) when it's done.
 let releaseTimer = 0;
