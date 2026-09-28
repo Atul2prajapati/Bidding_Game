@@ -5,7 +5,7 @@ import { MAXP, newGame, handle, tick } from "/shared/engine.js";
 import { ctx, save, clip } from "./state.js";
 import { view, ranking } from "./views.js";
 import { connect } from "./net.js";
-import { play, setSound, isSoundOn, enableTilt, fly, confetti, countUp, pickAnimation } from "./fx.js";
+import { play, setSound, isSoundOn, enableTilt, fly, confetti, countUp, pickAnimation, PICK_MS } from "./fx.js";
 
 const app = document.getElementById("app");
 const toastEl = document.getElementById("toast");
@@ -55,12 +55,16 @@ function render() {
     const el = app.querySelector(".lot .fut, .lot .portrait");
     if (el) flight = { rect: el.getBoundingClientRect(), html: el.outerHTML, pid: S.lastPick.pid };
   }
-  // The next hand deals in after the pick animation, not on top of it.
-  ctx.fx.dealLate = !!(pickShow && ctx.fx.deal);
-  if (ctx.fx.deal) ctx.fx.dealtAt = Date.now() + (ctx.fx.dealLate ? 650 : 0);
+  // The next hand stays hidden until the pick animation is done, then deals in (no overlap).
+  if (pickShow) ctx.fx.holdUntil = Date.now() + PICK_MS;
+  const holding = Date.now() < ctx.fx.holdUntil;
+  if (ctx.fx.deal) ctx.fx.dealtAt = holding ? ctx.fx.holdUntil : Date.now();
+  if (holding && ctx.fx.deal) ctx.fx.pendingDeal = true;
+  ctx.fx.dealLate = false;
 
   app.innerHTML = view();
   updateTimers();
+  holdHand();
 
   // Keep the current picker visible in the turn-order bar (it scrolls sideways on small screens).
   const strip = app.querySelector(".order"), seat = strip?.querySelector(".seat.now");
@@ -206,6 +210,24 @@ app.addEventListener("click", e => {
     case "again": ctx.role === "solo" ? startSolo() : hostSend({ type: "again" }); break;
   }
 });
+
+// While a pick animation plays, keep the next hand hidden; release it (with its deal-in) when it's done.
+let releaseTimer = 0;
+function holdHand() {
+  const hand = app.querySelector(".hand");
+  if (!hand) return;
+  const wait = ctx.fx.holdUntil - Date.now();
+  if (wait <= 0) return;
+  hand.classList.add("held");
+  hand.classList.remove("deal");
+  clearTimeout(releaseTimer);
+  releaseTimer = setTimeout(() => {
+    const h = app.querySelector(".hand");
+    if (!h) return;
+    h.classList.remove("held");
+    if (ctx.fx.pendingDeal) { void h.offsetWidth; h.classList.add("deal"); ctx.fx.pendingDeal = false; }
+  }, wait);
+}
 
 // Where a player's new card should land: the first visible spot among their new team slot or their avatar.
 function pickTarget(pid) {

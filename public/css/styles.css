@@ -778,22 +778,16 @@ button, .hcard, .cat { touch-action: manipulation; }          /* no double-tap z
 .pick-stage { position: fixed; z-index: 58; pointer-events: none; }
 .pick-stage .hand { margin: 0; }
 .pick-stage .hcard { transition: none; }
-.hcard.pick-chosen { z-index: 2; border-color: var(--accent); animation: pick-lift .36s var(--ease) forwards;
+.hcard.pick-chosen { z-index: 2; border-color: var(--accent); animation: pick-lift .26s var(--ease) forwards;
   box-shadow: 0 0 0 3px var(--accent), 0 0 34px color-mix(in srgb, var(--accent) 60%, transparent), var(--shadow-lg); }
 .hcard.pick-chosen::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
   background: linear-gradient(115deg, transparent 35%, rgba(255,255,255,.55) 50%, transparent 65%); animation: pick-shine .5s ease-out forwards; }
-.hcard.pick-away { animation: pick-away .42s cubic-bezier(.5, 0, .75, 0) forwards; }
-@keyframes pick-lift { to { transform: translateY(-16px) scale(1.08); } }
+.hcard.pick-away { animation: pick-away .34s cubic-bezier(.5, 0, .75, 0) forwards; }
+@keyframes pick-lift { to { transform: translate3d(0, -14px, 0) scale(1.06); } }
 @keyframes pick-shine { from { transform: translateX(-70%); opacity: 1; } to { transform: translateX(70%); opacity: 0; } }
-@keyframes pick-away { to { transform: translateY(46px) scale(.86) rotate(var(--r, 4deg)); opacity: 0; filter: blur(1px); } }
+@keyframes pick-away { to { transform: translate3d(0, 40px, 0) scale(.88) rotate(var(--r, 4deg)); opacity: 0; } }
 .hcard.pick-away:nth-child(odd) { --r: -5deg; }
 
-/* The next hand waits for the pick to finish before dealing in */
-.hand.deal.late .hcard { animation-delay: .62s; }
-.hand.deal.late .hcard:nth-child(2) { animation-delay: .68s; }
-.hand.deal.late .hcard:nth-child(3) { animation-delay: .74s; }
-.hand.deal.late .hcard:nth-child(4) { animation-delay: .80s; }
-.hand.deal.late .hcard:nth-child(5) { animation-delay: .86s; }
 
 /* Landing sparkle */
 .burst { position: fixed; z-index: 59; width: 0; height: 0; pointer-events: none; }
@@ -802,3 +796,11 @@ button, .hcard, .cat { touch-action: manipulation; }          /* no double-tap z
 @keyframes burst-dot { to { transform: translate(var(--tx), var(--ty)) scale(.3); opacity: 0; } }
 @keyframes burst-ring { from { transform: scale(.3); opacity: 1; } to { transform: scale(1.6); opacity: 0; } }
 .slot.pop, .avatar.pop { animation: pop .45s var(--ease); }
+
+/* Smoother picks: the next hand stays hidden until the pick animation is done, and moving cards
+   skip the expensive shadow filter so phones can animate them on the graphics chip. */
+.hand.held { visibility: hidden; }
+.pick-stage .hcard { will-change: transform, opacity; }
+.pick-stage .fut { filter: none !important; }
+.pick-stage .hcard .shine, .pick-stage .fut.icon .fut-inner::after, .pick-stage .rar-gold .portrait::before { display: none; }
+.hand.deal .hcard { will-change: transform; }

@@ -16,7 +16,7 @@ export const ctx = {
   filter: "all",
   net: null,          // WebSocket connection when online
   photos: {},         // card photos from /images/manifest.json, by market kind then card name
-  fx: { deal: false, dealLate: false, dealtAt: 0, newPick: false },  // animation flags for the next render
+  fx: { deal: false, dealLate: false, dealtAt: 0, holdUntil: 0, pendingDeal: false, newPick: false },  // animation flags
   mobileTab: "play"   // phone layout: "play" | "teams" | "picks"
 };
 

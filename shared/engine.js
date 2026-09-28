@@ -315,7 +315,7 @@ export function tick(S, now = Date.now()) {
   if (S.mode === "draft") {
     const p = S.players[S.turn];
     if (p.bot) {
-      if (!S._botAt) S._botAt = now + 700 + Math.random() * 1000;
+      if (!S._botAt) S._botAt = now + 1300 + Math.random() * 900;   // long enough for the pick animation to finish
       return now >= S._botAt ? doPick(S, p, botPick(S, p)) : false;
     }
     return S.ends && now >= S.ends ? doPick(S, p, botPick(S, p), true) : false;

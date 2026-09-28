@@ -141,7 +141,19 @@ export function countUp(root) {
 
 /* ---------- The pick: chosen card lifts and glows, the rest drop away, it flies into the team ---------- */
 // `handHtml` / `handRect`: the hand as it looked just before the pick (the page has already re-rendered).
+// Timing: lift 260ms, then fly 480ms. PICK_MS is the whole thing; the next hand deals in after it.
+export const PICK_MS = 780;
+let current = null;                                   // only one pick animation at a time
+
+function finishCurrent() {
+  if (!current) return;
+  current.timers.forEach(clearTimeout);
+  current.stage.remove();
+  current = null;
+}
+
 export function pickAnimation({ handHtml, handRect, chosen, target }) {
+  finishCurrent();
   if (reducedMotion() || !handHtml || !handRect) { target?.classList.add("pop"); return; }
   const stage = document.createElement("div");
   stage.className = "pick-stage";
@@ -149,29 +161,30 @@ export function pickAnimation({ handHtml, handRect, chosen, target }) {
   stage.innerHTML = handHtml;
   document.body.appendChild(stage);
   const hand = stage.firstElementChild;
-  hand.classList.remove("deal", "late");
+  hand.classList.remove("deal", "late", "held");
   const cards = [...hand.querySelectorAll(".hcard")];
   const pick = cards.find(c => c.dataset.v === String(chosen));
-  cards.forEach((c, k) => { if (c !== pick) { c.style.animationDelay = k * 30 + "ms"; c.classList.add("pick-away"); } });
-  if (!pick) { setTimeout(() => stage.remove(), 500); return; }
+  cards.forEach((c, k) => { if (c !== pick) { c.style.animationDelay = k * 25 + "ms"; c.classList.add("pick-away"); } });
+  const timers = [];
+  current = { stage, timers };
+  if (!pick) { timers.push(setTimeout(finishCurrent, 420)); return; }
   pick.classList.add("pick-chosen");
 
-  // After the lift, fly the chosen card to the player's team.
-  setTimeout(() => {
+  timers.push(setTimeout(() => {
     const from = pick.getBoundingClientRect(), to = target?.getBoundingClientRect();
-    if (!to || !to.width) { pick.classList.add("pick-away"); setTimeout(() => stage.remove(), 450); return; }
+    if (!to || !to.width) { pick.classList.add("pick-away"); timers.push(setTimeout(finishCurrent, 400)); return; }
     const dx = to.left + to.width / 2 - (from.left + from.width / 2);
     const dy = to.top + to.height / 2 - (from.top + from.height / 2);
     const s = Math.max(0.12, to.width / from.width);
-    pick.style.transition = "transform .6s cubic-bezier(.55,-0.15,.25,1), opacity .6s ease-in";
-    pick.style.transform = `translate(${dx}px, ${dy}px) scale(${s}) rotate(${dx > 0 ? 14 : -14}deg)`;
-    pick.style.opacity = "0.35";
-    setTimeout(() => {
-      stage.remove();
+    pick.style.transition = "transform .48s cubic-bezier(.5,-0.1,.3,1), opacity .48s ease-in";
+    pick.style.transform = `translate3d(${dx}px, ${dy}px, 0) scale(${s}) rotate(${dx > 0 ? 12 : -12}deg)`;
+    pick.style.opacity = "0.4";
+    timers.push(setTimeout(() => {
+      finishCurrent();
       target.classList.remove("pop"); void target.offsetWidth; target.classList.add("pop");
       burst(to.left + to.width / 2, to.top + to.height / 2);
-    }, 600);
-  }, 360);
+    }, 480));
+  }, 260));
 }
 
 // Little sparkle burst where the card lands.
