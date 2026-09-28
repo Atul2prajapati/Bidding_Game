@@ -1,0 +1,17 @@
+# Render blueprint: the multiplayer server (WebSockets, rooms, bots).
+# In Render: New + -> Blueprint -> pick this repository. Render reads this file.
+services:
+  - type: web
+    name: hundred-dollar-draft
+    runtime: node
+    plan: free
+    buildCommand: npm install --omit=dev
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      # Your Vercel address(es), so only your site can use this server for multiplayer.
+      # Example: https://hundred-dollar-draft.vercel.app  (comma-separate several)
+      - key: ALLOWED_ORIGINS
+        sync: false

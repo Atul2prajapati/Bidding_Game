@@ -1,0 +1,23 @@
+{
+  "name": "hundred-dollar-draft",
+  "version": "1.0.0",
+  "description": "Pick Anime, Football or Food, get 5 random cards each turn, and build the best team with $100. Solo or multiplayer.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "node --test test/*.test.js",
+    "images": "node scripts/fetch-images.js",
+    "build:web": "node scripts/build-web.mjs"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.4"
+  }
+}

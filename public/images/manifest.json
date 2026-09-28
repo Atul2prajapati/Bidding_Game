@@ -1,0 +1,2973 @@
+{
+  "football": {
+    "Messi": {
+      "file": "football/messi.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Leo_Messi_Argentina_v_Egypt_7_July_2026-1.jpg"
+    },
+    "Ronaldo": {
+      "file": "football/ronaldo.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cristiano_Ronaldo_Croatia_v_Portugal_2_July_2026-075_(cropped).jpg"
+    },
+    "Mbappé": {
+      "file": "football/mbappe.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kylian_Mbappe_France_v_Senegal_16_June_2026-391_(cropped).jpg"
+    },
+    "Haaland": {
+      "file": "football/haaland.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Erling_Haaland_Morocco_v_Norway_7_June_2026-51.jpg"
+    },
+    "Neymar": {
+      "file": "football/neymar.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Neymar_Junior_Brazil_V_Morocco_13_June_2026-40.jpg"
+    },
+    "Vinícius Jr": {
+      "file": "football/vinicius-jr.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vin%C3%ADcius_J%C3%BAnior_Brazil_V_Morocco_13_June_2026-207_(cropped).jpg"
+    },
+    "Yamal": {
+      "file": "football/yamal.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lamine_Yamal_France_v_Spain_7.24.26-142.jpg"
+    },
+    "Kane": {
+      "file": "football/kane.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Harry_Kane_England_v_Ghana_23_June_2026-219_(cropped).jpg"
+    },
+    "Salah": {
+      "file": "football/salah.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mohamed_Salah_Argentina_v_Egypt_7_July_2026-163_(cropped).jpg"
+    },
+    "Bale": {
+      "file": "football/bale.webp",
+      "private": false,
+      "credit": "حسین ظهروند, CC BY 4.0",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2022_FIFA_World_Cup_United_States_1%E2%80%931_Wales_-_(32)_2.png"
+    },
+    "Benzema": {
+      "file": "football/benzema.webp",
+      "private": false,
+      "credit": "Zack, CC BY 4.0",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Karim_Benzema_Pick.jpg"
+    },
+    "Lewandowski": {
+      "file": "football/lewandowski.webp",
+      "private": false,
+      "credit": "Sven Mandel, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2019147183134_2019-05-27_Fussball_1.FC_Kaiserslautern_vs_FC_Bayern_M%C3%BCnchen_-_Sven_-_1D_X_MK_II_-_0228_-_B70I8527_(cropped).jpg"
+    },
+    "Saka": {
+      "file": "football/saka.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bukayo_Saka_England_v_Ghana_23_June_2026-057_(cropped).jpg"
+    },
+    "Griezmann": {
+      "file": "football/griezmann.webp",
+      "private": false,
+      "credit": "Антон Зайцев, CC BY-SA 3.0",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:FRA-ARG_(10)_(cropped).jpg"
+    },
+    "Son": {
+      "file": "football/son.webp",
+      "private": false,
+      "credit": "Ujishadow, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:BFA_2023_-2_Heung-Min_Son_(cropped).jpg"
+    },
+    "Rashford": {
+      "file": "football/rashford.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Marcus_Rashford_England_v_Ghana_23_June_2026-073.jpg"
+    },
+    "Grealish": {
+      "file": "football/grealish.webp",
+      "private": false,
+      "credit": "Hameltion, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:ManCity20240722-017_(cropped).jpg"
+    },
+    "Núñez": {
+      "file": "football/nunez.webp",
+      "private": false,
+      "credit": "Steffen Prößdorf, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Darwin_N%C3%BA%C3%B1ez_(cropped).jpg"
+    },
+    "Richarlison": {
+      "file": "football/richarlison.webp",
+      "private": false,
+      "credit": "Assembleia Legislativa do Espírito Santo, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Richarlison_%C3%A9_homenageado_na_ALES_(10.July.2019)_08_(cropped).jpg"
+    },
+    "Bellingham": {
+      "file": "football/bellingham.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jude_Bellingham_England_v_Ghana_23_June_2026-061_(cropped).jpg"
+    },
+    "Rodri": {
+      "file": "football/rodri.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rodri_Argentina_v_Spain_19_July_2026-187_(cropped).jpg"
+    },
+    "De Bruyne": {
+      "file": "football/de-bruyne.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kevin_De_Bruyne_USMNT_v_Belgium_Mar_28_2026-64_(cropped).jpg"
+    },
+    "Modrić": {
+      "file": "football/modric.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Luka_Modric_Croatia_v_Portugal_2_July_2026-055.jpg"
+    },
+    "Musiala": {
+      "file": "football/musiala.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jamal_Musiala_Ecuador_v_Germany_25_June_2026-174_(cropped).jpg"
+    },
+    "Pedri": {
+      "file": "football/pedri.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pedri_France_v_Spain_7.24.26-245.jpg"
+    },
+    "Kimmich": {
+      "file": "football/kimmich.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Joshua_Kimmich_Ecuador_v_Germany_25_June_2026-149.jpg"
+    },
+    "Rice": {
+      "file": "football/rice.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Declan_Rice_England_v_Ghana_23_June_2026-150.jpg"
+    },
+    "De Jong": {
+      "file": "football/de-jong.webp",
+      "private": false,
+      "credit": "Unknown authorUnknown author, CC BY 4.0",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Frenkie_De_Jong_(2025)_(cropped).png"
+    },
+    "Bruno F.": {
+      "file": "football/bruno-f.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bruno_Fernandes_USMNT_v_Portugal_Mar_31_2026-27_(cropped).jpg"
+    },
+    "Casemiro": {
+      "file": "football/casemiro.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Casemiro_Brazil_V_Morocco_13_June_2026-76_(cropped).jpg"
+    },
+    "Mount": {
+      "file": "football/mount.webp",
+      "private": false,
+      "credit": "Voltmetro, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mason_Mount_-_2021-12-08_-_FC_Zenit_Saint_Petersburg_v_Chelsea_F.C.jpg"
+    },
+    "Henderson": {
+      "file": "football/henderson.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jordan_Henderson_England_v_Ghana_23_June_2026-029_(cropped).jpg"
+    },
+    "Phillips": {
+      "file": "football/phillips.webp",
+      "private": false,
+      "credit": "مهدی مریزاد, CC BY 4.0",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2022_FIFA_World_Cup_England_6%E2%80%932_Iran_-_(33)_(cropped).jpg"
+    },
+    "Van Dijk": {
+      "file": "football/van-dijk.webp",
+      "private": false,
+      "credit": "Ailura, CC BY-SA 3.0 at",
+      "license": "CC BY-SA 3.0 at",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
+      "source": "https://commons.wikimedia.org/wiki/File:20160604_AUT_NED_8876_(cropped).jpg"
+    },
+    "Rúben Dias": {
+      "file": "football/ruben-dias.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Diogo_Costa_Ruben_Dias_Croatia_v_Portugal_2_July_2026-181_(cropped).jpg"
+    },
+    "Saliba": {
+      "file": "football/saliba.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:William_Saliba_France_v_Paraguay_4_July_2026-183.jpg"
+    },
+    "Hakimi": {
+      "file": "football/hakimi.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Achraf_Hakimi_Morocco_v_Norway_7_June_2026-16.jpg"
+    },
+    "Rüdiger": {
+      "file": "football/rudiger.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Antonio_Rudiger_Ecuador_v_Germany_25_June_2026-055_(cropped).jpg"
+    },
+    "Theo": {
+      "file": "football/theo.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Theo_Hernandez_France_v_Senegal_16_June_2026-222_(cropped).jpg"
+    },
+    "Trent": {
+      "file": "football/trent.webp",
+      "private": false,
+      "credit": "Антон Зайцев, CC BY-SA 3.0",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Trent_Alexander-Arnold_2018_(cropped).jpg"
+    },
+    "Marquinhos": {
+      "file": "football/marquinhos.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Marquinhos_Brazil_V_Morocco_13_June_2026-153_(cropped).jpg"
+    },
+    "Walker": {
+      "file": "football/walker.webp",
+      "private": false,
+      "credit": "Кирилл Венедиктов, CC BY-SA 3.0",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kyle_Walker.jpg"
+    },
+    "Ramos": {
+      "file": "football/ramos.webp",
+      "private": false,
+      "credit": "Real Madrid, CC BY 3.0",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sergio_Ramos_Interview_2021_(cropped).jpg"
+    },
+    "Ben White": {
+      "file": "football/ben-white.webp",
+      "private": false,
+      "credit": "James Boyes from UK, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ben_White_2018.jpg"
+    },
+    "Alisson": {
+      "file": "football/alisson.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Alisson_Becker_Brazil_V_Morocco_13_June_2026-117_(cropped).jpg"
+    },
+    "Courtois": {
+      "file": "football/courtois.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Thibaut_Courtois_Belgium_v_USA_6_July_2026-076_(cropped).jpg"
+    },
+    "Donnarumma": {
+      "file": "football/donnarumma.webp",
+      "private": false,
+      "credit": "MichaelEmilio, CC BY 4.0",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Norway_Italy_-_June_2025_A_17_(Gianluigi_Donnarumma).jpg"
+    },
+    "Ter Stegen": {
+      "file": "football/ter-stegen.webp",
+      "private": false,
+      "credit": "Government of Catalonia, CC0",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source": "https://commons.wikimedia.org/wiki/File:Marc-Andre_Ter_Stegen_ACCI_FCBARCELONA_Turisme_Catalunya_gira_pretemporada_CATPRESS.jpg"
+    },
+    "Ederson": {
+      "file": "football/ederson.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ederson_Brazil_V_Morocco_13_June_2026-14_(cropped).jpg"
+    },
+    "Raya": {
+      "file": "football/raya.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:David_Raya_Argentina_v_Spain_19_July_2026-003_(cropped).jpg"
+    },
+    "Pickford": {
+      "file": "football/pickford.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jordan_Pickford_England_v_Ghana_23_June_2026-316_(cropped).jpg"
+    },
+    "Ramsdale": {
+      "file": "football/ramsdale.webp",
+      "private": false,
+      "credit": "Oche180, CC BY 4.0",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Aaron_Ramsdale_2026.png"
+    },
+    "Maguire": {
+      "file": "football/maguire.webp",
+      "private": false,
+      "credit": "UK Prime Minister, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Harry_Maguire_2023_(cropped).jpg"
+    },
+    "Trippier": {
+      "file": "football/trippier.webp",
+      "private": false,
+      "credit": "Кирилл Венедиктов, CC BY-SA 3.0",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kieran_Trippier_2018-07-14_1.jpg"
+    },
+    "Chilwell": {
+      "file": "football/chilwell.webp",
+      "private": false,
+      "credit": "Дмитрий Пукалик, CC BY-SA 3.0",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ben_Chilwell_2020.jpg"
+    },
+    "Suárez": {
+      "file": "football/suarez.webp",
+      "private": false,
+      "credit": "The White House, Public domain",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "source": "https://commons.wikimedia.org/wiki/File:Luis_Su%C3%A1rez_2026_(cropped).jpg"
+    },
+    "Pelé": {
+      "file": "football/pele.webp",
+      "private": false,
+      "credit": "Unknown authorUnknown author, Public domain",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "source": "https://commons.wikimedia.org/wiki/File:Pele_con_brasil_(cropped).jpg"
+    },
+    "Maradona": {
+      "file": "football/maradona.webp",
+      "private": false,
+      "credit": "Unknown authorUnknown author, Public domain",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "source": "https://commons.wikimedia.org/wiki/File:Argentina_celebrando_copa_(cropped).jpg"
+    },
+    "Ronaldo Nazário": {
+      "file": "football/ronaldo-nazario.webp",
+      "private": false,
+      "credit": "Lula Oficial, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:12.12.2025_%E2%80%93_Cerim%C3%B4nia_de_lan%C3%A7amento_do_SBT_News_-_54980664160_(cropped2).jpg"
+    },
+    "Zidane": {
+      "file": "football/zidane.webp",
+      "private": false,
+      "credit": "Hadi Abyar, CC BY 4.0",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Zinedine_Zidane_by_Tasnim_03.jpg"
+    },
+    "Cruyff": {
+      "file": "football/cruyff.webp",
+      "private": false,
+      "credit": "Rob Mieremet / Anefo, CC0",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source": "https://commons.wikimedia.org/wiki/File:Johan_Cruijff_(1974).jpg"
+    },
+    "Ronaldinho": {
+      "file": "football/ronaldinho.webp",
+      "private": false,
+      "credit": "Marcos Corrêa/PR, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ronaldinho_in_2019.jpg"
+    },
+    "Puskás": {
+      "file": "football/puskas.webp",
+      "private": false,
+      "credit": "Panini, Public domain",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "source": "https://commons.wikimedia.org/wiki/File:Ferenc_Puskas_en_1965.jpg"
+    },
+    "Beckenbauer": {
+      "file": "football/beckenbauer.webp",
+      "private": false,
+      "credit": "Panini Group, Public domain",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "source": "https://commons.wikimedia.org/wiki/File:Franz_Beckenbauer_(1975).jpg"
+    },
+    "Maldini": {
+      "file": "football/maldini.webp",
+      "private": false,
+      "credit": "GOAL TV, CC BY 3.0",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Paolo_Maldini_AC_Milan_Technical_director_2018.jpg"
+    },
+    "Eusébio": {
+      "file": "football/eusebio.webp",
+      "private": false,
+      "credit": "Panini, Public domain",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "source": "https://commons.wikimedia.org/wiki/File:Eusebio_en_1973.jpg"
+    },
+    "Henry": {
+      "file": "football/henry.webp",
+      "private": false,
+      "credit": "Web Summit, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Thierry_Henry_(51649035951)_(cropped).jpg"
+    },
+    "Yashin": {
+      "file": "football/yashin.webp",
+      "private": false,
+      "credit": "Kroon, Ron for Anefo, CC BY-SA 3.0 nl",
+      "license": "CC BY-SA 3.0 nl",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+      "source": "https://commons.wikimedia.org/wiki/File:LevYashin.JPG"
+    },
+    "Iniesta": {
+      "file": "football/iniesta.webp",
+      "private": false,
+      "credit": "Bryan Berlin, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Andr%C3%A9s_Iniesta_Argentina_v_Spain_19_July_2026-034_(cropped).jpg"
+    },
+    "Rivaldo": {
+      "file": "football/rivaldo.webp",
+      "private": false,
+      "credit": "Laura Cortizo/Portal da Copa, CC BY 3.0 br",
+      "license": "CC BY 3.0 br",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/br/deed.en",
+      "source": "https://commons.wikimedia.org/wiki/File:Rivaldo.jpg"
+    },
+    "Buffon": {
+      "file": "football/buffon.webp",
+      "private": false,
+      "credit": "MichaelEmilio, CC BY 4.0",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Norway_Italy_-_June_2025_A_44_(Gianluigi_Buffon).jpg"
+    },
+    "Kaká": {
+      "file": "football/kaka.webp",
+      "private": false,
+      "credit": "Евгений Асмолов, CC BY-SA 3.0",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kak%C3%A1_visited_Stadium_St._Petersburg.jpg"
+    },
+    "Pirlo": {
+      "file": "football/pirlo.webp",
+      "private": false,
+      "credit": "Clément Bucco-Lechat, CC BY-SA 3.0",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:20150616_-_Portugal_-_Italie_-_Gen%C3%A8ve_-_Andrea_Pirlo_(cropped).jpg"
+    },
+    "Figo": {
+      "file": "football/figo.webp",
+      "private": false,
+      "credit": "Žan Kolman, Public domain",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "source": "https://commons.wikimedia.org/wiki/File:Luis_Figo_2023.jpg"
+    },
+    "Totti": {
+      "file": "football/totti.webp",
+      "private": false,
+      "credit": "Антон Зайцев, CC BY-SA 3.0",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:KL-2018_(4).jpg"
+    },
+    "Bergkamp": {
+      "file": "football/bergkamp.webp",
+      "private": false,
+      "credit": "Kieran Clarke, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dennis_Bergkamp_2014_(cropped).jpg"
+    },
+    "Gerrard": {
+      "file": "football/gerrard.webp",
+      "private": false,
+      "credit": "Эдгар Брещанов, CC BY-SA 3.0",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Steven_Gerrard_2018.jpg"
+    },
+    "Vieira": {
+      "file": "football/vieira.webp",
+      "private": false,
+      "credit": "Simon Heseltine, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Patrick_Vieira_NYCFC_(cropped).JPG"
+    },
+    "Roberto Carlos": {
+      "file": "football/roberto-carlos.webp",
+      "private": false,
+      "credit": "Web Summit, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:LS3_1288_(53332367864)_(cropped).jpg"
+    },
+    "Cafu": {
+      "file": "football/cafu.webp",
+      "private": false,
+      "credit": "Lula Oficial, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cafu_-_26.02.2026_-_Cerim%C3%B4nia_de_apresenta%C3%A7%C3%A3o_das_ta%C3%A7as_da_Copa_do_Mundo_de_2026.jpg"
+    },
+    "Nesta": {
+      "file": "football/nesta.webp",
+      "private": false,
+      "credit": "Joerudi, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Alessandro_Nesta_as_Miami_FC_Manager.jpg"
+    },
+    "Casillas": {
+      "file": "football/casillas.webp",
+      "private": false,
+      "credit": "Web Summit, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Iker-Casillas-SportsTrade-2021-cropped.jpg"
+    },
+    "Drogba": {
+      "file": "football/drogba.webp",
+      "private": false,
+      "credit": "Y.Leclercq©, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Didier_Drogba_(2019)_(cropped2).jpg"
+    },
+    "Beckham": {
+      "file": "football/beckham.webp",
+      "private": false,
+      "credit": "Soccer Aid for Unicef, CC BY 3.0",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:David_Beckham_UNICEF_(cropped2).jpg"
+    }
+  },
+  "anime": {
+    "Goku": {
+      "file": "anime/goku.webp",
+      "private": true,
+      "credit": "Dragon Ball © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/246",
+      "matched": "Gokuu Son"
+    },
+    "Vegeta": {
+      "file": "anime/vegeta.webp",
+      "private": true,
+      "credit": "Dragon Ball © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/913",
+      "matched": "Vegeta"
+    },
+    "Frieza": {
+      "file": "anime/frieza.webp",
+      "private": true,
+      "credit": "Dragon Ball © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/3694",
+      "matched": "Freeza"
+    },
+    "Krillin": {
+      "file": "anime/krillin.webp",
+      "private": true,
+      "credit": "Dragon Ball © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/2159",
+      "matched": "Kuririn"
+    },
+    "Mr. Satan": {
+      "file": "anime/mr-satan.webp",
+      "private": true,
+      "credit": "Dragon Ball © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/9377",
+      "matched": "Mister Satan"
+    },
+    "Naruto": {
+      "file": "anime/naruto.webp",
+      "private": true,
+      "credit": "Naruto © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/17",
+      "matched": "Naruto Uzumaki"
+    },
+    "Sasuke": {
+      "file": "anime/sasuke.webp",
+      "private": true,
+      "credit": "Naruto © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/13",
+      "matched": "Sasuke Uchiha"
+    },
+    "Madara": {
+      "file": "anime/madara.webp",
+      "private": true,
+      "credit": "Naruto © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/53901",
+      "matched": "Madara Uchiha"
+    },
+    "Itachi": {
+      "file": "anime/itachi.webp",
+      "private": true,
+      "credit": "Naruto © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/14",
+      "matched": "Itachi Uchiha"
+    },
+    "Kakashi": {
+      "file": "anime/kakashi.webp",
+      "private": true,
+      "credit": "Naruto © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/85",
+      "matched": "Kakashi Hatake"
+    },
+    "Rock Lee": {
+      "file": "anime/rock-lee.webp",
+      "private": true,
+      "credit": "Naruto © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/306",
+      "matched": "Rock Lee"
+    },
+    "Sakura": {
+      "file": "anime/sakura.webp",
+      "private": true,
+      "credit": "Naruto © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/145",
+      "matched": "Sakura Haruno"
+    },
+    "Luffy": {
+      "file": "anime/luffy.webp",
+      "private": true,
+      "credit": "One Piece © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/40",
+      "matched": "Luffy Monkey"
+    },
+    "Zoro": {
+      "file": "anime/zoro.webp",
+      "private": true,
+      "credit": "One Piece © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/62",
+      "matched": "Zoro Roronoa"
+    },
+    "Sanji": {
+      "file": "anime/sanji.webp",
+      "private": true,
+      "credit": "One Piece © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/305",
+      "matched": "Sanji"
+    },
+    "Nami": {
+      "file": "anime/nami.webp",
+      "private": true,
+      "credit": "One Piece © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/723",
+      "matched": "Nami"
+    },
+    "Usopp": {
+      "file": "anime/usopp.webp",
+      "private": true,
+      "credit": "One Piece © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/724",
+      "matched": "Usopp"
+    },
+    "Gojo": {
+      "file": "anime/gojo.webp",
+      "private": true,
+      "credit": "Jujutsu Kaisen © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/127691",
+      "matched": "Satoru Gojou"
+    },
+    "Megumi": {
+      "file": "anime/megumi.webp",
+      "private": true,
+      "credit": "Jujutsu Kaisen © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/126635",
+      "matched": "Megumi Fushiguro"
+    },
+    "Eren": {
+      "file": "anime/eren.webp",
+      "private": true,
+      "credit": "Attack on Titan © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/40882",
+      "matched": "Eren Yeager"
+    },
+    "Mikasa": {
+      "file": "anime/mikasa.webp",
+      "private": true,
+      "credit": "Attack on Titan © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/40881",
+      "matched": "Mikasa Ackerman"
+    },
+    "Armin": {
+      "file": "anime/armin.webp",
+      "private": true,
+      "credit": "Attack on Titan © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/46494",
+      "matched": "Armin Arlert"
+    },
+    "Muzan": {
+      "file": "anime/muzan.webp",
+      "private": true,
+      "credit": "Demon Slayer © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/129132",
+      "matched": "Muzan Kibutsuji"
+    },
+    "Nezuko": {
+      "file": "anime/nezuko.webp",
+      "private": true,
+      "credit": "Demon Slayer © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/127518",
+      "matched": "Nezuko Kamado"
+    },
+    "Zenitsu": {
+      "file": "anime/zenitsu.webp",
+      "private": true,
+      "credit": "Demon Slayer © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/129131",
+      "matched": "Zenitsu Agatsuma"
+    },
+    "Inosuke": {
+      "file": "anime/inosuke.webp",
+      "private": true,
+      "credit": "Demon Slayer © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/129130",
+      "matched": "Inosuke Hashibira"
+    },
+    "All Might": {
+      "file": "anime/all-might.webp",
+      "private": true,
+      "credit": "My Hero Academia © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/89224",
+      "matched": "Toshinori Yagi"
+    },
+    "Deku": {
+      "file": "anime/deku.webp",
+      "private": true,
+      "credit": "My Hero Academia © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/89028",
+      "matched": "Izuku Midoriya"
+    },
+    "Bakugo": {
+      "file": "anime/bakugo.webp",
+      "private": true,
+      "credit": "My Hero Academia © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/88892",
+      "matched": "Katsuki Bakugou"
+    },
+    "Todoroki": {
+      "file": "anime/todoroki.webp",
+      "private": true,
+      "credit": "My Hero Academia © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/89220",
+      "matched": "Shouto Todoroki"
+    },
+    "Saitama": {
+      "file": "anime/saitama.webp",
+      "private": true,
+      "credit": "One Punch Man © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/73935",
+      "matched": "Saitama"
+    },
+    "Genos": {
+      "file": "anime/genos.webp",
+      "private": true,
+      "credit": "One Punch Man © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/73979",
+      "matched": "Genos"
+    },
+    "Makima": {
+      "file": "anime/makima.webp",
+      "private": true,
+      "credit": "Chainsaw Man © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/137080",
+      "matched": "Makima"
+    },
+    "Denji": {
+      "file": "anime/denji.webp",
+      "private": true,
+      "credit": "Chainsaw Man © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/130102",
+      "matched": "Denji"
+    },
+    "Power": {
+      "file": "anime/power.webp",
+      "private": true,
+      "credit": "Chainsaw Man © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/137079",
+      "matched": "Power"
+    },
+    "L": {
+      "file": "anime/l.webp",
+      "private": true,
+      "credit": "Death Note © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/71",
+      "matched": "L Lawliet"
+    },
+    "Light Yagami": {
+      "file": "anime/light-yagami.webp",
+      "private": true,
+      "credit": "Death Note © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/80",
+      "matched": "Light Yagami"
+    },
+    "Killua": {
+      "file": "anime/killua.webp",
+      "private": true,
+      "credit": "Hunter x Hunter © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/27",
+      "matched": "Killua Zoldyck"
+    },
+    "Gon": {
+      "file": "anime/gon.webp",
+      "private": true,
+      "credit": "Hunter x Hunter © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/30",
+      "matched": "Gon Freecss"
+    },
+    "Ichigo": {
+      "file": "anime/ichigo.webp",
+      "private": true,
+      "credit": "Bleach © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/5",
+      "matched": "Ichigo Kurosaki"
+    },
+    "Edward Elric": {
+      "file": "anime/edward-elric.webp",
+      "private": true,
+      "credit": "Fullmetal Alchemist © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/11",
+      "matched": "Edward Elric"
+    },
+    "Yor": {
+      "file": "anime/yor.webp",
+      "private": true,
+      "credit": "Spy x Family © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/138102",
+      "matched": "Yor Forger"
+    },
+    "Loid": {
+      "file": "anime/loid.webp",
+      "private": true,
+      "credit": "Spy x Family © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/138101",
+      "matched": "Loid Forger"
+    },
+    "Anya": {
+      "file": "anime/anya.webp",
+      "private": true,
+      "credit": "Spy x Family © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/138100",
+      "matched": "Anya Forger"
+    },
+    "Megumin": {
+      "file": "anime/megumin.webp",
+      "private": true,
+      "credit": "KonoSuba © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/89361",
+      "matched": "Megumin"
+    },
+    "Kazuma": {
+      "file": "anime/kazuma.webp",
+      "private": true,
+      "credit": "KonoSuba © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/89364",
+      "matched": "Kazuma Satou"
+    },
+    "Aqua": {
+      "file": "anime/aqua.webp",
+      "private": true,
+      "credit": "KonoSuba © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/89362",
+      "matched": "Aqua"
+    },
+    "Asta": {
+      "file": "anime/asta.webp",
+      "private": true,
+      "credit": "Black Clover © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/123285",
+      "matched": "Asta"
+    },
+    "Shikamaru": {
+      "file": "anime/shikamaru.webp",
+      "private": true,
+      "credit": "Naruto © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/2007",
+      "matched": "Shikamaru Nara"
+    },
+    "Chopper": {
+      "file": "anime/chopper.webp",
+      "private": true,
+      "credit": "One Piece © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/309",
+      "matched": "Chopper Tony Tony"
+    },
+    "Brook": {
+      "file": "anime/brook.webp",
+      "private": true,
+      "credit": "One Piece © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/5627",
+      "matched": "Brook"
+    },
+    "Uraraka": {
+      "file": "anime/uraraka.webp",
+      "private": true,
+      "credit": "My Hero Academia © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/89221",
+      "matched": "Ochako Uraraka"
+    },
+    "Kaminari": {
+      "file": "anime/kaminari.webp",
+      "private": true,
+      "credit": "My Hero Academia © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/89249",
+      "matched": "Denki Kaminari"
+    },
+    "Mineta": {
+      "file": "anime/mineta.webp",
+      "private": true,
+      "credit": "My Hero Academia © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/89244",
+      "matched": "Minoru Mineta"
+    },
+    "Yamcha": {
+      "file": "anime/yamcha.webp",
+      "private": true,
+      "credit": "Dragon Ball © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/4014",
+      "matched": "Yamcha"
+    },
+    "Chiaotzu": {
+      "file": "anime/chiaotzu.webp",
+      "private": true,
+      "credit": "Dragon Ball © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/2151",
+      "matched": "Chaozu"
+    },
+    "Kobeni": {
+      "file": "anime/kobeni.webp",
+      "private": true,
+      "credit": "Chainsaw Man © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/144594",
+      "matched": "Kobeni Higashiyama"
+    },
+    "Mumen Rider": {
+      "file": "anime/mumen-rider.webp",
+      "private": true,
+      "credit": "One Punch Man © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/81935",
+      "matched": "Satoru"
+    },
+    "Sukuna": {
+      "file": "anime/sukuna.webp",
+      "private": true,
+      "credit": "Jujutsu Kaisen © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/133701",
+      "matched": "Sukuna"
+    },
+    "Yuji": {
+      "file": "anime/yuji.webp",
+      "private": true,
+      "credit": "Jujutsu Kaisen © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/127212",
+      "matched": "Yuuji Itadori"
+    },
+    "Levi": {
+      "file": "anime/levi.webp",
+      "private": true,
+      "credit": "Attack on Titan © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/45627",
+      "matched": "Levi"
+    },
+    "Rengoku": {
+      "file": "anime/rengoku.webp",
+      "private": true,
+      "credit": "Demon Slayer © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/129133",
+      "matched": "Kyoujurou Rengoku"
+    },
+    "Tanjiro": {
+      "file": "anime/tanjiro.webp",
+      "private": true,
+      "credit": "Demon Slayer © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/126071",
+      "matched": "Tanjirou Kamado"
+    },
+    "Aizen": {
+      "file": "anime/aizen.webp",
+      "private": true,
+      "credit": "Bleach © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/1086",
+      "matched": "Sousuke Aizen"
+    },
+    "Hinata": {
+      "file": "anime/hinata.webp",
+      "private": true,
+      "credit": "Naruto © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/1555",
+      "matched": "Hinata Hyuuga"
+    },
+    "Choji": {
+      "file": "anime/choji.webp",
+      "private": true,
+      "credit": "Naruto © its creators and studio. Image via AniList. Private use only.",
+      "source": "https://anilist.co/character/2008",
+      "matched": "Chouji Akimichi"
+    }
+  },
+  "updated": "2026-09-27T15:51:02.111Z",
+  "cricket": {
+    "Virat Kohli": {
+      "file": "cricket/virat-kohli.webp",
+      "private": false,
+      "pick": "File:Virat Kohli during the India vs Aus 4th Test match at Narendra Modi Stadium on 09 March 2023.jpg",
+      "credit": "Prime Minister's Office, GODL-India",
+      "license": "GODL-India",
+      "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+      "source": "https://commons.wikimedia.org/wiki/File:Virat_Kohli_during_the_India_vs_Aus_4th_Test_match_at_Narendra_Modi_Stadium_on_09_March_2023.jpg"
+    },
+    "Joe Root": {
+      "file": "cricket/joe-root.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "Ben Sutherland, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Joe_Root_walks_in_to_bat,_2019_Ashes.jpg",
+      "matched": "Joe Root walks in to bat, 2019 Ashes.jpg"
+    },
+    "Rohit Sharma": {
+      "file": "cricket/rohit-sharma.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "Blnguyen, CC BY-SA 3.0",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Rohit_Sharma_bowling.jpg",
+      "matched": "Rohit Sharma bowling.jpg"
+    },
+    "Steve Smith": {
+      "file": "cricket/steve-smith.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "David Molloy, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Steve_Smith_Cricketer.jpg",
+      "matched": "Steve Smith Cricketer.jpg"
+    },
+    "Kane Williamson": {
+      "file": "cricket/kane-williamson.webp",
+      "private": false,
+      "pick": "File:Kane Williamson in 2019.jpg",
+      "credit": "Mark Lockett, CC BY-SA 2.0",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kane_Williamson_in_2019.jpg"
+    },
+    "Babar Azam": {
+      "file": "cricket/babar-azam.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "Nazly Ahmed, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Asitha_Fernando_vs_Babar_Azam,_Colombo_2023_(cropped).jpg",
+      "matched": "Asitha Fernando vs Babar Azam, Colombo 2023 (cropped).jpg"
+    },
+    "Travis Head": {
+      "file": "cricket/travis-head.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "Calistemon, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Travis_Head_bowling_at_Perth_Stadium,_First_Test_Australia_versus_West_Indies,_2_December_2022_03_(cropped).jpg",
+      "matched": "Travis Head bowling at Perth Stadium, First Test Australia versus West Indies, 2 December 2022 03 (cropped).jpg"
+    },
+    "Shubman Gill": {
+      "file": "cricket/shubman-gill.webp",
+      "private": false,
+      "pick": "File:Prince Shubman Gill.jpg",
+      "credit": "RockyinXXX, CC0",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source": "https://commons.wikimedia.org/wiki/File:Prince_Shubman_Gill.jpg"
+    },
+    "Suryakumar Yadav": {
+      "file": "cricket/suryakumar-yadav.webp",
+      "private": false,
+      "credit": "Prime Minister's Office, GODL-India",
+      "license": "GODL-India",
+      "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+      "source": "https://commons.wikimedia.org/wiki/File:Suryakumar_Yadav_in_PMO_New_Delhi.jpg"
+    },
+    "Yashasvi Jaiswal": {
+      "file": "cricket/yashasvi-jaiswal.webp",
+      "private": false,
+      "credit": "Prime Minister's Office, GODL-India",
+      "license": "GODL-India",
+      "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+      "source": "https://commons.wikimedia.org/wiki/File:Yashasvi_Jaiswal_in_PMO_New_Delhi.jpg"
+    },
+    "Harry Brook": {
+      "file": "cricket/harry-brook.webp",
+      "private": false,
+      "credit": "Dave Morton, Public domain",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "source": "https://commons.wikimedia.org/wiki/File:Harry_Brook_County_cricket_cropped.jpg"
+    },
+    "David Warner": {
+      "file": "cricket/david-warner.webp",
+      "private": false,
+      "pick": "File:David Warner NSW v Tasmania.jpg",
+      "credit": "NAPARAZZI, CC BY-SA 2.0",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:David_Warner_NSW_v_Tasmania.jpg"
+    },
+    "Faf du Plessis": {
+      "file": "cricket/faf-du-plessis.webp",
+      "private": false,
+      "credit": "Dave Morton, Public domain",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "source": "https://commons.wikimedia.org/wiki/File:Faf_du_Plessis_2019_Boxing_Day.jpg"
+    },
+    "Shreyas Iyer": {
+      "file": "cricket/shreyas-iyer.webp",
+      "private": false,
+      "pick": "File:Shreyas Iyer 2021.jpg",
+      "credit": "247 Entertainment, CC BY 3.0",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Shreyas_Iyer_2021.jpg"
+    },
+    "Prithvi Shaw": {
+      "file": "cricket/prithvi-shaw.webp",
+      "private": false,
+      "credit": "CRICKETNEXT, CC BY 3.0",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Prithvi_shaw.png"
+    },
+    "Mayank Agarwal": {
+      "file": "cricket/mayank-agarwal.webp",
+      "private": false,
+      "credit": "Dave Morton, Public domain",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "source": "https://commons.wikimedia.org/wiki/File:2_38_Agarwal_mugshot.jpg"
+    },
+    "MS Dhoni": {
+      "file": "cricket/ms-dhoni.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "Pulkitsinha, CC BY-SA 2.0",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dhoni_behind_Stumps.jpg",
+      "matched": "Dhoni behind Stumps.jpg"
+    },
+    "Jos Buttler": {
+      "file": "cricket/jos-buttler.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "Harrias, CC BY-SA 3.0",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jos_buttler.JPG",
+      "matched": "Jos buttler.JPG"
+    },
+    "Rishabh Pant": {
+      "file": "cricket/rishabh-pant.webp",
+      "private": false,
+      "credit": "Prime Minister's Office, GODL-India",
+      "license": "GODL-India",
+      "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+      "source": "https://commons.wikimedia.org/wiki/File:Rishabh_Pant.jpg"
+    },
+    "KL Rahul": {
+      "file": "cricket/kl-rahul.webp",
+      "private": false,
+      "pick": "File:LOKESH RAHUL-15573141953 (cropped).JPG",
+      "credit": "NAPARAZZI, CC BY-SA 2.0",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:LOKESH_RAHUL-15573141953_(cropped).JPG"
+    },
+    "Quinton de Kock": {
+      "file": "cricket/quinton-de-kock.webp",
+      "private": false,
+      "credit": "NAPARAZZI, CC BY-SA 2.0",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:QUINTON_DE_KOCK_(15681398316).jpg"
+    },
+    "Sanju Samson": {
+      "file": "cricket/sanju-samson.webp",
+      "private": false,
+      "credit": "Prime Minister's Office, GODL-India",
+      "license": "GODL-India",
+      "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+      "source": "https://commons.wikimedia.org/wiki/File:Sanju_Samson_in_PMO_New_Delhi.jpg"
+    },
+    "Dinesh Karthik": {
+      "file": "cricket/dinesh-karthik.webp",
+      "private": false,
+      "pick": "File:Dinesh Karthik 2.jpg",
+      "credit": "Blnguyen, CC BY-SA 3.0",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Dinesh_Karthik_2.jpg"
+    },
+    "Ben Stokes": {
+      "file": "cricket/ben-stokes.webp",
+      "private": false,
+      "pick": "File:Ben Stokes, 2013 (cropped further).jpg",
+      "credit": "Dan Heap, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ben_Stokes,_2013_(cropped_further).jpg"
+    },
+    "Ravindra Jadeja": {
+      "file": "cricket/ravindra-jadeja.webp",
+      "private": false,
+      "credit": "Prime Minister's Office, GODL-India",
+      "license": "GODL-India",
+      "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+      "source": "https://commons.wikimedia.org/wiki/File:PM_Shri_Narendra_Modi_with_Ravindra_Jadeja_(Cropped).jpg"
+    },
+    "Hardik Pandya": {
+      "file": "cricket/hardik-pandya.webp",
+      "private": false,
+      "credit": "Prime Minister's Office, GODL-India",
+      "license": "GODL-India",
+      "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+      "source": "https://commons.wikimedia.org/wiki/File:Hardik_Pandya_in_PMO_New_Delhi.jpg"
+    },
+    "Sunil Narine": {
+      "file": "cricket/sunil-narine.webp",
+      "private": false,
+      "credit": "Kolkata Knight Riders - Official, CC BY 3.0",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sunil_Narine.jpg"
+    },
+    "Glenn Maxwell": {
+      "file": "cricket/glenn-maxwell.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "www.davidmolloyphotography.com from Sydney, Australia, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2018.02.03.22.38.28-Glenn_Maxwell-0003_(25557926667)_(cropped).jpg",
+      "matched": "2018.02.03.22.38.28-Glenn Maxwell-0003 (25557926667) (cropped).jpg"
+    },
+    "Andre Russell": {
+      "file": "cricket/andre-russell.webp",
+      "private": false,
+      "pick": "File:Andre Russell (2).jpg",
+      "credit": "Kolkata Knight Riders - Official, CC BY 3.0",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Andre_Russell_(2).jpg"
+    },
+    "Shakib Al Hasan": {
+      "file": "cricket/shakib-al-hasan.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "Harrias, CC BY-SA 3.0",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Shakib_al_hasan_4.jpg",
+      "matched": "Shakib al hasan 4.jpg"
+    },
+    "Axar Patel": {
+      "file": "cricket/axar-patel.webp",
+      "private": false,
+      "credit": "Prime Minister's Office, GODL-India",
+      "license": "GODL-India",
+      "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+      "source": "https://commons.wikimedia.org/wiki/File:Axar_Patel_in_PMO_New_Delhi.jpg"
+    },
+    "Mitchell Marsh": {
+      "file": "cricket/mitchell-marsh.webp",
+      "private": false,
+      "pick": "File:Mitchell Marsh.jpg",
+      "credit": "www.davidmolloyphotography.com, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mitchell_Marsh.jpg"
+    },
+    "Cameron Green": {
+      "file": "cricket/cameron-green.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "WikiWanderer261, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cameron_Green_fielding_Boxing_Day_2022_(cropped).jpg",
+      "matched": "Cameron Green fielding Boxing Day 2022 (cropped).jpg"
+    },
+    "Marcus Stoinis": {
+      "file": "cricket/marcus-stoinis.webp",
+      "private": false,
+      "credit": "www.davidmolloyphotography.com from Sydney, Australia, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2018.01.21.15.22.25-Stoinis_(39081521620).jpg"
+    },
+    "Washington Sundar": {
+      "file": "cricket/washington-sundar.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "Dee03, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Washington_Sundar_2.jpg",
+      "matched": "Washington Sundar 2.jpg"
+    },
+    "Shivam Dube": {
+      "file": "cricket/shivam-dube.webp",
+      "private": false,
+      "credit": "Prime Minister's Office, GODL-India",
+      "license": "GODL-India",
+      "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+      "source": "https://commons.wikimedia.org/wiki/File:Shivam_Dube_in_PMO_New_Delhi.jpg"
+    },
+    "Jasprit Bumrah": {
+      "file": "cricket/jasprit-bumrah.webp",
+      "private": false,
+      "credit": "Prime Minister's Office, GODL-India",
+      "license": "GODL-India",
+      "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+      "source": "https://commons.wikimedia.org/wiki/File:Jasprit_Bumrah_in_PMO_New_Delhi.jpg"
+    },
+    "Rashid Khan": {
+      "file": "cricket/rashid-khan.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "Afghanistan Cricket Board, CC BY 3.0",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rashid_Khan_celebrating.jpg",
+      "matched": "Rashid Khan celebrating.jpg"
+    },
+    "Pat Cummins": {
+      "file": "cricket/pat-cummins.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "SirWellsy99, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pat_Cummins_fielding_Ashes_2021_(cropped).jpg",
+      "matched": "Pat Cummins fielding Ashes 2021 (cropped).jpg"
+    },
+    "Mitchell Starc": {
+      "file": "cricket/mitchell-starc.webp",
+      "private": false,
+      "pick": "File:Mitchell Starc 2008.jpg",
+      "credit": "NAPARAZZI, CC BY-SA 2.0",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mitchell_Starc_2008.jpg"
+    },
+    "Kagiso Rabada": {
+      "file": "cricket/kagiso-rabada.webp",
+      "private": false,
+      "pick": "File:KAGISO RABADA (15519760378).jpg",
+      "credit": "NAPARAZZI, CC BY-SA 2.0",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:KAGISO_RABADA_(15519760378).jpg"
+    },
+    "Trent Boult": {
+      "file": "cricket/trent-boult.webp",
+      "private": false,
+      "credit": "www.davidmolloyphotography.com from Sydney, Australia, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2018.02.03.22.23.14-AUSvNZL_T20_AUS_innings,_SCG_(39533156665).jpg"
+    },
+    "Shaheen Afridi": {
+      "file": "cricket/shaheen-afridi.webp",
+      "private": false,
+      "credit": "Nazly Ahmed, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Shaheen_Afridi_jogging_Sri_Lanka_vs_Pakistan_-_2nd_TEST_Match_-_SSC,_Colombo_(cropped).jpg"
+    },
+    "Mohammed Shami": {
+      "file": "cricket/mohammed-shami.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "Aidan Sammons, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mohammed_Shami_bowling_against_England_at_Edgbaston.jpg",
+      "matched": "Mohammed Shami bowling against England at Edgbaston.jpg"
+    },
+    "Josh Hazlewood": {
+      "file": "cricket/josh-hazlewood.webp",
+      "private": false,
+      "credit": "www.davidmolloyphotography.com from Sydney, Australia, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2018_Josh_Hazlewood_(cropped).jpg"
+    },
+    "Kuldeep Yadav": {
+      "file": "cricket/kuldeep-yadav.webp",
+      "private": false,
+      "credit": "Prime Minister's Office, GODL-India",
+      "license": "GODL-India",
+      "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+      "source": "https://commons.wikimedia.org/wiki/File:Kuldeep_Yadav_in_PMO_New_Delhi.jpg"
+    },
+    "Ravichandran Ashwin": {
+      "file": "cricket/ravichandran-ashwin.webp",
+      "private": false,
+      "pick": "File:R Ashwin bowling at Trent Bridge 2018 (cropped).jpg",
+      "credit": "Dun.can from Leicestershire, UK, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:R_Ashwin_bowling_at_Trent_Bridge_2018_(cropped).jpg"
+    },
+    "Nathan Lyon": {
+      "file": "cricket/nathan-lyon.webp",
+      "private": false,
+      "pick": "File:Nathan Lyon 20251017.jpg",
+      "credit": "DustyNail, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nathan_Lyon_20251017.jpg"
+    },
+    "Yuzvendra Chahal": {
+      "file": "cricket/yuzvendra-chahal.webp",
+      "private": false,
+      "credit": "Prime Minister's Office, GODL-India",
+      "license": "GODL-India",
+      "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+      "source": "https://commons.wikimedia.org/wiki/File:Yuzvendra_Chahal_in_PMO_New_Delhi.jpg"
+    },
+    "Mohammed Siraj": {
+      "file": "cricket/mohammed-siraj.webp",
+      "private": false,
+      "credit": "Prime Minister's Office, GODL-India",
+      "license": "GODL-India",
+      "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+      "source": "https://commons.wikimedia.org/wiki/File:Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Mohammad_Siraj_(cropped).jpg"
+    },
+    "Arshdeep Singh": {
+      "file": "cricket/arshdeep-singh.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "Storm machine, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Arshdeep_Singh_2022.jpg",
+      "matched": "Arshdeep Singh 2022.jpg"
+    },
+    "Mark Wood": {
+      "file": "cricket/mark-wood.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "Neb, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mark_wood_bowling_boxing_day_test.jpg",
+      "matched": "Mark wood bowling boxing day test.jpg"
+    },
+    "Bhuvneshwar Kumar": {
+      "file": "cricket/bhuvneshwar-kumar.webp",
+      "private": false,
+      "pick": "File:Bhuvneshwar kumar With Rashid Zirak (Bhuvneshwar Kumar cropped).jpg",
+      "credit": "Akshayparmar.gu, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bhuvneshwar_kumar_With_Rashid_Zirak_(Bhuvneshwar_Kumar_cropped).jpg"
+    },
+    "Adam Zampa": {
+      "file": "cricket/adam-zampa.webp",
+      "private": false,
+      "credit": "Storm machine, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Adam_Zampa_2023.jpg"
+    },
+    "Sachin Tendulkar": {
+      "file": "cricket/sachin-tendulkar.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "PulkitSinha, CC BY-SA 2.0",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sachin_Tendulkar_drives_a_ball_2010.jpg",
+      "matched": "Sachin Tendulkar drives a ball 2010.jpg"
+    },
+    "Don Bradman": {
+      "file": "cricket/don-bradman.webp",
+      "private": false,
+      "pick": "File:Donald Bradman australian cricket player pic.JPG",
+      "credit": "Unknown photographer, Public domain",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "source": "https://commons.wikimedia.org/wiki/File:Donald_Bradman_australian_cricket_player_pic.JPG"
+    },
+    "Ruturaj Gaikwad": {
+      "file": "cricket/ruturaj-gaikwad.webp",
+      "private": false,
+      "pick": "File:Ruturaj Gaikwad.jpeg",
+      "credit": "Prime Minister's Office, GODL-India",
+      "license": "GODL-India",
+      "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+      "source": "https://commons.wikimedia.org/wiki/File:Ruturaj_Gaikwad.jpeg"
+    },
+    "Venkatesh Iyer": {
+      "file": "cricket/venkatesh-iyer.webp",
+      "private": false,
+      "credit": "Kolkata Knight Riders, CC BY 3.0",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Venkatesh_Iyer.png"
+    },
+    "Brian Lara": {
+      "file": "cricket/brian-lara.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "Ukexpat, CC BY-SA 3.0",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:BrianLaraUkexpatCropped.jpg",
+      "matched": "BrianLaraUkexpatCropped.jpg"
+    },
+    "Jacques Kallis": {
+      "file": "cricket/jacques-kallis.webp",
+      "private": false,
+      "pick": "File:JAQUES KALLIS (3175901786).jpg",
+      "credit": "NAPARAZZI, CC BY-SA 2.0",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:JAQUES_KALLIS_(3175901786).jpg"
+    },
+    "Garfield Sobers": {
+      "file": "cricket/garfield-sobers.webp",
+      "private": false,
+      "pick": "File:Garfield Sobers, 1956.jpg",
+      "credit": "Unidentified photographer, Public domain",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "source": "https://commons.wikimedia.org/wiki/File:Garfield_Sobers,_1956.jpg"
+    },
+    "Shane Warne": {
+      "file": "cricket/shane-warne.webp",
+      "private": false,
+      "pick": "File:Shane Warne bowling 2009.jpg",
+      "credit": "Chris Brown, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Shane_Warne_bowling_2009.jpg"
+    },
+    "AB de Villiers": {
+      "file": "cricket/ab-de-villiers.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "paddynapper, CC BY-SA 2.0",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:AB_de_Villiers_2.jpg",
+      "matched": "AB de Villiers 2.jpg"
+    },
+    "Muttiah Muralitharan": {
+      "file": "cricket/muttiah-muralitharan.webp",
+      "private": false,
+      "pick": "File:MUTTIAH MURALITHARAN (5155182417).jpg",
+      "credit": "NAPARAZZI, CC BY-SA 2.0",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:MUTTIAH_MURALITHARAN_(5155182417).jpg"
+    },
+    "Glenn McGrath": {
+      "file": "cricket/glenn-mcgrath.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "The original uploader was Stephen Turner at English Wikipedia., Public domain",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "source": "https://commons.wikimedia.org/wiki/File:Glenn_McGrath_01_crop.jpg",
+      "matched": "Glenn McGrath 01 crop.jpg"
+    },
+    "Wasim Akram": {
+      "file": "cricket/wasim-akram.webp",
+      "private": false,
+      "pick": "File:Wasim Akram 1.jpg",
+      "credit": "Kolkata Knight Riders - Official, CC BY 3.0",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Wasim_Akram_1.jpg"
+    },
+    "Ricky Ponting": {
+      "file": "cricket/ricky-ponting.webp",
+      "private": false,
+      "pick": "File:Australian cricket team captain Ricky Ponting tries to hook a ball off India's Asish Nehra at Vadodara.jpg",
+      "credit": "Deirdre Chute, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Australian_cricket_team_captain_Ricky_Ponting_tries_to_hook_a_ball_off_India%27s_Asish_Nehra_at_Vadodara.jpg"
+    },
+    "Rahul Dravid": {
+      "file": "cricket/rahul-dravid.webp",
+      "private": false,
+      "pick": "File:Rahul Dravid in PMO New Delhi.jpg",
+      "credit": "Prime Minister's Office, GODL-India",
+      "license": "GODL-India",
+      "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+      "source": "https://commons.wikimedia.org/wiki/File:Rahul_Dravid_in_PMO_New_Delhi.jpg"
+    },
+    "Kumar Sangakkara": {
+      "file": "cricket/kumar-sangakkara.webp",
+      "private": false,
+      "pick": "File:Kumar Sangakkara bat in hand.JPG",
+      "credit": "Amal316, CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kumar_Sangakkara_bat_in_hand.JPG"
+    },
+    "Adam Gilchrist": {
+      "file": "cricket/adam-gilchrist.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "The original uploader was Dannow at English Wikipedia., Public domain",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "source": "https://commons.wikimedia.org/wiki/File:Gilly_Adam_Gilchrist_100.jpg",
+      "matched": "Gilly Adam Gilchrist 100.jpg"
+    },
+    "Dale Steyn": {
+      "file": "cricket/dale-steyn.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "NAPARAZZI, CC BY-SA 2.0",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:DALE_STEYNE_(3174348061).jpg",
+      "matched": "DALE STEYNE (3174348061).jpg"
+    },
+    "Anil Kumble": {
+      "file": "cricket/anil-kumble.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "lensbug.chandru, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kumble_edited.jpg",
+      "matched": "Kumble edited.jpg"
+    },
+    "Waqar Younis": {
+      "file": "cricket/waqar-younis.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "Harrias, CC BY-SA 3.0",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Waqar_younis.jpg",
+      "matched": "Waqar younis.jpg"
+    },
+    "Richard Hadlee": {
+      "file": "cricket/richard-hadlee.webp",
+      "private": false,
+      "credit": "Kristina D.C. Hoeppner, CC BY-SA 2.0",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sir_Richard_Hadlee_Fill_the_Basin_for_Christchurch_(cropped).jpg"
+    },
+    "Chris Gayle": {
+      "file": "cricket/chris-gayle.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "Dannow at English Wikipedia, Public domain",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "source": "https://commons.wikimedia.org/wiki/File:ChrisGayle_Cropped.jpg",
+      "matched": "ChrisGayle Cropped.jpg"
+    },
+    "Virender Sehwag": {
+      "file": "cricket/virender-sehwag.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "Blnguyen, CC BY-SA 3.0",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Virender_Sehwag.jpg",
+      "matched": "Virender Sehwag.jpg"
+    },
+    "Yuvraj Singh": {
+      "file": "cricket/yuvraj-singh.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "Blnguyen, CC BY-SA 3.0",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Yuvraj_Singh_batting.jpg",
+      "matched": "Yuvraj Singh batting.jpg"
+    },
+    "Sanath Jayasuriya": {
+      "file": "cricket/sanath-jayasuriya.webp",
+      "private": false,
+      "pick": "File:Jayasuriya.jpg",
+      "credit": "TonyPatterson, CC BY 2.0",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jayasuriya.jpg"
+    },
+    "Lasith Malinga": {
+      "file": "cricket/lasith-malinga.webp",
+      "private": false,
+      "matchPhoto": true,
+      "credit": "paddynapper, CC BY-SA 2.0",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lasith_Malinga_tossing_a_cricket_ball_at_practice.jpg",
+      "matched": "Lasith Malinga tossing a cricket ball at practice.jpg"
+    }
+  },
+  "pokemon": {
+    "Mewtwo": {
+      "file": "pokemon/mewtwo.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/150"
+    },
+    "Mew": {
+      "file": "pokemon/mew.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/151"
+    },
+    "Rayquaza": {
+      "file": "pokemon/rayquaza.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/384"
+    },
+    "Arceus": {
+      "file": "pokemon/arceus.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/493"
+    },
+    "Lugia": {
+      "file": "pokemon/lugia.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/249"
+    },
+    "Ho-Oh": {
+      "file": "pokemon/ho-oh.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/250"
+    },
+    "Groudon": {
+      "file": "pokemon/groudon.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/383"
+    },
+    "Kyogre": {
+      "file": "pokemon/kyogre.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/382"
+    },
+    "Dialga": {
+      "file": "pokemon/dialga.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/483"
+    },
+    "Palkia": {
+      "file": "pokemon/palkia.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/484"
+    },
+    "Giratina": {
+      "file": "pokemon/giratina.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/487"
+    },
+    "Zekrom": {
+      "file": "pokemon/zekrom.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/644"
+    },
+    "Reshiram": {
+      "file": "pokemon/reshiram.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/643"
+    },
+    "Articuno": {
+      "file": "pokemon/articuno.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/144"
+    },
+    "Zapdos": {
+      "file": "pokemon/zapdos.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/145"
+    },
+    "Moltres": {
+      "file": "pokemon/moltres.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/146"
+    },
+    "Charizard": {
+      "file": "pokemon/charizard.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/6"
+    },
+    "Blastoise": {
+      "file": "pokemon/blastoise.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/9"
+    },
+    "Venusaur": {
+      "file": "pokemon/venusaur.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/3"
+    },
+    "Dragonite": {
+      "file": "pokemon/dragonite.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/149"
+    },
+    "Tyranitar": {
+      "file": "pokemon/tyranitar.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/248"
+    },
+    "Garchomp": {
+      "file": "pokemon/garchomp.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/445"
+    },
+    "Metagross": {
+      "file": "pokemon/metagross.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/376"
+    },
+    "Salamence": {
+      "file": "pokemon/salamence.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/373"
+    },
+    "Lucario": {
+      "file": "pokemon/lucario.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/448"
+    },
+    "Greninja": {
+      "file": "pokemon/greninja.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/658"
+    },
+    "Blaziken": {
+      "file": "pokemon/blaziken.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/257"
+    },
+    "Gengar": {
+      "file": "pokemon/gengar.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/94"
+    },
+    "Gyarados": {
+      "file": "pokemon/gyarados.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/130"
+    },
+    "Snorlax": {
+      "file": "pokemon/snorlax.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/143"
+    },
+    "Alakazam": {
+      "file": "pokemon/alakazam.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/65"
+    },
+    "Machamp": {
+      "file": "pokemon/machamp.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/68"
+    },
+    "Arcanine": {
+      "file": "pokemon/arcanine.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/59"
+    },
+    "Lapras": {
+      "file": "pokemon/lapras.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/131"
+    },
+    "Scizor": {
+      "file": "pokemon/scizor.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/212"
+    },
+    "Gardevoir": {
+      "file": "pokemon/gardevoir.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/282"
+    },
+    "Infernape": {
+      "file": "pokemon/infernape.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/392"
+    },
+    "Swampert": {
+      "file": "pokemon/swampert.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/260"
+    },
+    "Sceptile": {
+      "file": "pokemon/sceptile.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/254"
+    },
+    "Mimikyu": {
+      "file": "pokemon/mimikyu.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/778"
+    },
+    "Umbreon": {
+      "file": "pokemon/umbreon.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/197"
+    },
+    "Espeon": {
+      "file": "pokemon/espeon.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/196"
+    },
+    "Sylveon": {
+      "file": "pokemon/sylveon.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/700"
+    },
+    "Vaporeon": {
+      "file": "pokemon/vaporeon.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/134"
+    },
+    "Jolteon": {
+      "file": "pokemon/jolteon.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/135"
+    },
+    "Flareon": {
+      "file": "pokemon/flareon.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/136"
+    },
+    "Pikachu": {
+      "file": "pokemon/pikachu.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/25"
+    },
+    "Raichu": {
+      "file": "pokemon/raichu.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/26"
+    },
+    "Eevee": {
+      "file": "pokemon/eevee.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/133"
+    },
+    "Bulbasaur": {
+      "file": "pokemon/bulbasaur.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/1"
+    },
+    "Charmander": {
+      "file": "pokemon/charmander.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/4"
+    },
+    "Squirtle": {
+      "file": "pokemon/squirtle.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/7"
+    },
+    "Jigglypuff": {
+      "file": "pokemon/jigglypuff.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/39"
+    },
+    "Psyduck": {
+      "file": "pokemon/psyduck.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/54"
+    },
+    "Meowth": {
+      "file": "pokemon/meowth.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/52"
+    },
+    "Slowpoke": {
+      "file": "pokemon/slowpoke.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/79"
+    },
+    "Geodude": {
+      "file": "pokemon/geodude.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/74"
+    },
+    "Onix": {
+      "file": "pokemon/onix.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/95"
+    },
+    "Togepi": {
+      "file": "pokemon/togepi.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/175"
+    },
+    "Wobbuffet": {
+      "file": "pokemon/wobbuffet.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/202"
+    },
+    "Sudowoodo": {
+      "file": "pokemon/sudowoodo.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/185"
+    },
+    "Chansey": {
+      "file": "pokemon/chansey.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/113"
+    },
+    "Porygon": {
+      "file": "pokemon/porygon.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/137"
+    },
+    "Cubone": {
+      "file": "pokemon/cubone.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/104"
+    },
+    "Ditto": {
+      "file": "pokemon/ditto.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/132"
+    },
+    "Magikarp": {
+      "file": "pokemon/magikarp.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/129"
+    },
+    "Bidoof": {
+      "file": "pokemon/bidoof.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/399"
+    },
+    "Pidgey": {
+      "file": "pokemon/pidgey.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/16"
+    },
+    "Rattata": {
+      "file": "pokemon/rattata.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/19"
+    },
+    "Zubat": {
+      "file": "pokemon/zubat.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/41"
+    },
+    "Caterpie": {
+      "file": "pokemon/caterpie.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/10"
+    },
+    "Weedle": {
+      "file": "pokemon/weedle.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/13"
+    },
+    "Ekans": {
+      "file": "pokemon/ekans.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/23"
+    },
+    "Koffing": {
+      "file": "pokemon/koffing.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/109"
+    },
+    "Diglett": {
+      "file": "pokemon/diglett.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/50"
+    },
+    "Abra": {
+      "file": "pokemon/abra.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/63"
+    },
+    "Oddish": {
+      "file": "pokemon/oddish.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/43"
+    },
+    "Sunkern": {
+      "file": "pokemon/sunkern.webp",
+      "private": true,
+      "credit": "© Nintendo, Game Freak, The Pokémon Company. Artwork via PokeAPI. Private use only.",
+      "source": "https://pokeapi.co/api/v2/pokemon/191"
+    }
+  },
+  "heroes": {
+    "Thor": {
+      "file": "heroes/thor.webp",
+      "private": true,
+      "matched": "Thor",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/659.json"
+    },
+    "Hulk": {
+      "file": "heroes/hulk.webp",
+      "private": true,
+      "matched": "Hulk",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/332.json"
+    },
+    "Iron Man": {
+      "file": "heroes/iron-man.webp",
+      "private": true,
+      "matched": "Iron Man",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/346.json"
+    },
+    "Captain America": {
+      "file": "heroes/captain-america.webp",
+      "private": true,
+      "matched": "Captain America",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/149.json"
+    },
+    "Spider-Man": {
+      "file": "heroes/spider-man.webp",
+      "private": true,
+      "matched": "Spider-Man",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/620.json"
+    },
+    "Captain Marvel": {
+      "file": "heroes/captain-marvel.webp",
+      "private": true,
+      "matched": "Captain Marvel",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/157.json"
+    },
+    "Doctor Strange": {
+      "file": "heroes/doctor-strange.webp",
+      "private": true,
+      "matched": "Doctor Strange",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/226.json"
+    },
+    "Scarlet Witch": {
+      "file": "heroes/scarlet-witch.webp",
+      "private": true,
+      "matched": "Scarlet Witch",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/579.json"
+    },
+    "Black Panther": {
+      "file": "heroes/black-panther.webp",
+      "private": true,
+      "matched": "Black Panther",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/106.json"
+    },
+    "Wolverine": {
+      "file": "heroes/wolverine.webp",
+      "private": true,
+      "matched": "Wolverine",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/717.json"
+    },
+    "Deadpool": {
+      "file": "heroes/deadpool.webp",
+      "private": true,
+      "matched": "Deadpool",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/213.json"
+    },
+    "Vision": {
+      "file": "heroes/vision.webp",
+      "private": true,
+      "matched": "Vision",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/697.json"
+    },
+    "Silver Surfer": {
+      "file": "heroes/silver-surfer.webp",
+      "private": true,
+      "matched": "Silver Surfer",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/598.json"
+    },
+    "Jean Grey": {
+      "file": "heroes/jean-grey.webp",
+      "private": true,
+      "matched": "Jean Grey",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/356.json"
+    },
+    "Black Widow": {
+      "file": "heroes/black-widow.webp",
+      "private": true,
+      "matched": "Black Widow",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/107.json"
+    },
+    "She-Hulk": {
+      "file": "heroes/she-hulk.webp",
+      "private": true,
+      "matched": "She-Hulk",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/589.json"
+    },
+    "Ghost Rider": {
+      "file": "heroes/ghost-rider.webp",
+      "private": true,
+      "matched": "Ghost Rider",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/280.json"
+    },
+    "Storm": {
+      "file": "heroes/storm.webp",
+      "private": true,
+      "matched": "Storm",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/638.json"
+    },
+    "Professor X": {
+      "file": "heroes/professor-x.webp",
+      "private": true,
+      "matched": "Professor X",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/527.json"
+    },
+    "Daredevil": {
+      "file": "heroes/daredevil.webp",
+      "private": true,
+      "matched": "Daredevil",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/201.json"
+    },
+    "War Machine": {
+      "file": "heroes/war-machine.webp",
+      "private": true,
+      "matched": "War Machine",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/703.json"
+    },
+    "Gamora": {
+      "file": "heroes/gamora.webp",
+      "private": true,
+      "matched": "Gamora",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/275.json"
+    },
+    "Winter Soldier": {
+      "file": "heroes/winter-soldier.webp",
+      "private": true,
+      "matched": "Winter Soldier",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/714.json"
+    },
+    "Moon Knight": {
+      "file": "heroes/moon-knight.webp",
+      "private": true,
+      "matched": "Moon Knight",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/470.json"
+    },
+    "Blade": {
+      "file": "heroes/blade.webp",
+      "private": true,
+      "matched": "Blade",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/112.json"
+    },
+    "Quicksilver": {
+      "file": "heroes/quicksilver.webp",
+      "private": true,
+      "matched": "Quicksilver",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/536.json"
+    },
+    "Rogue": {
+      "file": "heroes/rogue.webp",
+      "private": true,
+      "matched": "Rogue",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/567.json"
+    },
+    "Gambit": {
+      "file": "heroes/gambit.webp",
+      "private": true,
+      "matched": "Gambit",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/274.json"
+    },
+    "Punisher": {
+      "file": "heroes/punisher.webp",
+      "private": true,
+      "matched": "Punisher",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/530.json"
+    },
+    "Cyclops": {
+      "file": "heroes/cyclops.webp",
+      "private": true,
+      "matched": "Cyclops",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/196.json"
+    },
+    "Star-Lord": {
+      "file": "heroes/star-lord.webp",
+      "private": true,
+      "matched": "Star-Lord",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/630.json"
+    },
+    "Groot": {
+      "file": "heroes/groot.webp",
+      "private": true,
+      "matched": "Groot",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/303.json"
+    },
+    "Drax": {
+      "file": "heroes/drax.webp",
+      "private": true,
+      "matched": "Drax the Destroyer",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/234.json"
+    },
+    "Iceman": {
+      "file": "heroes/iceman.webp",
+      "private": true,
+      "matched": "Iceman",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/339.json"
+    },
+    "Nightcrawler": {
+      "file": "heroes/nightcrawler.webp",
+      "private": true,
+      "matched": "Nightcrawler",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/490.json"
+    },
+    "Hawkeye": {
+      "file": "heroes/hawkeye.webp",
+      "private": true,
+      "matched": "Hawkeye",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/313.json"
+    },
+    "Rocket Raccoon": {
+      "file": "heroes/rocket-raccoon.webp",
+      "private": true,
+      "matched": "Rocket Raccoon",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/566.json"
+    },
+    "Ant-Man": {
+      "file": "heroes/ant-man.webp",
+      "private": true,
+      "matched": "Ant-Man",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/30.json"
+    },
+    "Nick Fury": {
+      "file": "heroes/nick-fury.webp",
+      "private": true,
+      "matched": "Nick Fury",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/489.json"
+    },
+    "Falcon": {
+      "file": "heroes/falcon.webp",
+      "private": true,
+      "matched": "Falcon",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/251.json"
+    },
+    "Wasp": {
+      "file": "heroes/wasp.webp",
+      "private": true,
+      "matched": "Wasp",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/708.json"
+    },
+    "Jubilee": {
+      "file": "heroes/jubilee.webp",
+      "private": true,
+      "matched": "Jubilee",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/372.json"
+    },
+    "Thanos": {
+      "file": "heroes/thanos.webp",
+      "private": true,
+      "matched": "Thanos",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/655.json"
+    },
+    "Galactus": {
+      "file": "heroes/galactus.webp",
+      "private": true,
+      "matched": "Galactus",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/273.json"
+    },
+    "Magneto": {
+      "file": "heroes/magneto.webp",
+      "private": true,
+      "matched": "Magneto",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/423.json"
+    },
+    "Doctor Doom": {
+      "file": "heroes/doctor-doom.webp",
+      "private": true,
+      "matched": "Doctor Doom",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/222.json"
+    },
+    "Ultron": {
+      "file": "heroes/ultron.webp",
+      "private": true,
+      "matched": "Ultron",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/680.json"
+    },
+    "Loki": {
+      "file": "heroes/loki.webp",
+      "private": true,
+      "matched": "Loki",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/414.json"
+    },
+    "Venom": {
+      "file": "heroes/venom.webp",
+      "private": true,
+      "matched": "Venom",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/687.json"
+    },
+    "Green Goblin": {
+      "file": "heroes/green-goblin.webp",
+      "private": true,
+      "matched": "Green Goblin",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/299.json"
+    },
+    "Mystique": {
+      "file": "heroes/mystique.webp",
+      "private": true,
+      "matched": "Mystique",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/480.json"
+    },
+    "Red Skull": {
+      "file": "heroes/red-skull.webp",
+      "private": true,
+      "matched": "Red Skull",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/550.json"
+    },
+    "Superman": {
+      "file": "heroes/superman.webp",
+      "private": true,
+      "matched": "Superman",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/644.json"
+    },
+    "Wonder Woman": {
+      "file": "heroes/wonder-woman.webp",
+      "private": true,
+      "matched": "Wonder Woman",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/720.json"
+    },
+    "Batman": {
+      "file": "heroes/batman.webp",
+      "private": true,
+      "matched": "Batman",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/69.json"
+    },
+    "Flash": {
+      "file": "heroes/flash.webp",
+      "private": true,
+      "matched": "Flash",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/263.json"
+    },
+    "Shazam": {
+      "file": "heroes/shazam.webp",
+      "private": true,
+      "matched": "Captain Marvel",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/156.json"
+    },
+    "Supergirl": {
+      "file": "heroes/supergirl.webp",
+      "private": true,
+      "matched": "Supergirl",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/643.json"
+    },
+    "Green Lantern": {
+      "file": "heroes/green-lantern.webp",
+      "private": true,
+      "matched": "Hal Jordan",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/306.json"
+    },
+    "Martian Manhunter": {
+      "file": "heroes/martian-manhunter.webp",
+      "private": true,
+      "matched": "Martian Manhunter",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/432.json"
+    },
+    "Aquaman": {
+      "file": "heroes/aquaman.webp",
+      "private": true,
+      "matched": "Aquaman",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/38.json"
+    },
+    "Cyborg": {
+      "file": "heroes/cyborg.webp",
+      "private": true,
+      "matched": "Cyborg",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/194.json"
+    },
+    "Starfire": {
+      "file": "heroes/starfire.webp",
+      "private": true,
+      "matched": "Starfire",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/632.json"
+    },
+    "Raven": {
+      "file": "heroes/raven.webp",
+      "private": true,
+      "matched": "Raven",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/542.json"
+    },
+    "Nightwing": {
+      "file": "heroes/nightwing.webp",
+      "private": true,
+      "matched": "Nightwing",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/491.json"
+    },
+    "Catwoman": {
+      "file": "heroes/catwoman.webp",
+      "private": true,
+      "matched": "Catwoman",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/165.json"
+    },
+    "Robin": {
+      "file": "heroes/robin.webp",
+      "private": true,
+      "matched": "Robin",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/561.json"
+    },
+    "Beast Boy": {
+      "file": "heroes/beast-boy.webp",
+      "private": true,
+      "matched": "Beast Boy",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/76.json"
+    },
+    "Alfred Pennyworth": {
+      "file": "heroes/alfred-pennyworth.webp",
+      "private": true,
+      "matched": "Alfred Pennyworth",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/17.json"
+    },
+    "Aquababy": {
+      "file": "heroes/aquababy.webp",
+      "private": true,
+      "matched": "Aquababy",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/36.json"
+    },
+    "Darkseid": {
+      "file": "heroes/darkseid.webp",
+      "private": true,
+      "matched": "Darkseid",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/204.json"
+    },
+    "Black Adam": {
+      "file": "heroes/black-adam.webp",
+      "private": true,
+      "matched": "Black Adam",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/95.json"
+    },
+    "Joker": {
+      "file": "heroes/joker.webp",
+      "private": true,
+      "matched": "Joker",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/370.json"
+    },
+    "Lex Luthor": {
+      "file": "heroes/lex-luthor.webp",
+      "private": true,
+      "matched": "Lex Luthor",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/405.json"
+    },
+    "Bane": {
+      "file": "heroes/bane.webp",
+      "private": true,
+      "matched": "Bane",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/60.json"
+    },
+    "Harley Quinn": {
+      "file": "heroes/harley-quinn.webp",
+      "private": true,
+      "matched": "Harley Quinn",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/309.json"
+    },
+    "Two-Face": {
+      "file": "heroes/two-face.webp",
+      "private": true,
+      "matched": "Two-Face",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/678.json"
+    },
+    "Riddler": {
+      "file": "heroes/riddler.webp",
+      "private": true,
+      "matched": "Riddler",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/558.json"
+    },
+    "Scarecrow": {
+      "file": "heroes/scarecrow.webp",
+      "private": true,
+      "matched": "Scarecrow",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/576.json"
+    },
+    "Penguin": {
+      "file": "heroes/penguin.webp",
+      "private": true,
+      "matched": "Penguin",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/514.json"
+    },
+    "Kid Flash": {
+      "file": "heroes/kid-flash.webp",
+      "private": true,
+      "matched": "Kid Flash",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/384.json"
+    },
+    "Black Canary": {
+      "file": "heroes/black-canary.webp",
+      "private": true,
+      "matched": "Black Canary",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/97.json"
+    },
+    "Deadshot": {
+      "file": "heroes/deadshot.webp",
+      "private": true,
+      "matched": "Deadshot",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/214.json"
+    },
+    "Killer Frost": {
+      "file": "heroes/killer-frost.webp",
+      "private": true,
+      "matched": "Killer Frost",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/387.json"
+    },
+    "Captain Cold": {
+      "file": "heroes/captain-cold.webp",
+      "private": true,
+      "matched": "Captain Cold",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/152.json"
+    },
+    "Clock King": {
+      "file": "heroes/clock-king.webp",
+      "private": true,
+      "matched": "Clock King",
+      "credit": "DC Comics character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/181.json"
+    },
+    "Black Cat": {
+      "file": "heroes/black-cat.webp",
+      "private": true,
+      "matched": "Black Cat",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/99.json"
+    },
+    "Kingpin": {
+      "file": "heroes/kingpin.webp",
+      "private": true,
+      "matched": "Kingpin",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/391.json"
+    },
+    "Negasonic Teenage Warhead": {
+      "file": "heroes/negasonic-teenage-warhead.webp",
+      "private": true,
+      "matched": "Negasonic Teenage Warhead",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/488.json"
+    },
+    "Multiple Man": {
+      "file": "heroes/multiple-man.webp",
+      "private": true,
+      "matched": "Multiple Man",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/478.json"
+    },
+    "Vulture": {
+      "file": "heroes/vulture.webp",
+      "private": true,
+      "matched": "Vulture",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/701.json"
+    },
+    "Pyro": {
+      "file": "heroes/pyro.webp",
+      "private": true,
+      "matched": "Pyro",
+      "credit": "Marvel character. Image via the open Superhero API. Private use only.",
+      "source": "https://akabab.github.io/superhero-api/api/id/532.json"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+node_modules/
+.DS_Store
+
+# Anime art belongs to the studios: keep it out of anything you publish.
+public/images/anime/
+public/images/pokemon/
+public/images/heroes/
+
+# Build output (Vercel builds this itself)
+dist/
+.vercel/
+node_modules/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+coverage/
+dist/
+build/

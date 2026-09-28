@@ -1,0 +1,895 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
+<title>Hundred Dollar Draft</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Figtree:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+:root{
+  --bg:#1f33c9; --bg2:#15248f; --ink:#0c0f2e; --paper:#ffffff; --paper2:#eef0ff;
+  --gold:#ffcf33; --hot:#ff5470; --ok:#19c37d; --sky:#3ec7ff; --amber:#ffb020;
+  --muted:#5a5f8f; --soft:#c9cefb; --line:rgba(255,255,255,.2);
+  --display:"Bowlby One", "Arial Black", Impact, sans-serif;
+  --body:Figtree, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{
+  background-color:var(--bg);
+  background-image:radial-gradient(rgba(255,255,255,.09) 1px, transparent 1.3px);
+  background-size:18px 18px;
+  color:#fff; font:15px/1.45 var(--body);
+}
+button{font:inherit; color:inherit; cursor:pointer}
+button:disabled{cursor:not-allowed}
+:focus-visible{outline:3px solid var(--gold); outline-offset:2px}
+.wrap{max-width:1180px; margin:0 auto; padding-inline:16px; padding-block:18px 48px}
+.top{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:20px}
+.brand{font-family:var(--display); color:var(--gold); line-height:.9; letter-spacing:.5px;
+  text-shadow:3px 3px 0 var(--ink); font-size:clamp(28px,6vw,54px); text-wrap:balance}
+.brand.sm{font-size:22px; text-shadow:2px 2px 0 var(--ink)}
+.brand small{display:block; font-size:.42em; color:#fff; letter-spacing:3px; margin-top:6px; text-shadow:none; font-family:var(--body); font-weight:800}
+.chip{display:inline-flex; align-items:center; gap:6px; border:2px solid var(--ink); background:var(--paper); color:var(--ink);
+  border-radius:999px; padding:3px 11px; font-weight:800; font-size:12px; letter-spacing:.6px; text-transform:uppercase; box-shadow:2px 2px 0 var(--ink)}
+.chip.gold{background:var(--gold)}
+.chips{display:flex; gap:8px; flex-wrap:wrap; align-items:center}
+
+.panel{background:var(--paper); color:var(--ink); border:2px solid var(--ink); border-radius:14px; box-shadow:5px 5px 0 var(--ink); padding:18px}
+.label{font-size:12px; font-weight:800; letter-spacing:1.4px; text-transform:uppercase; color:var(--soft); margin-bottom:10px}
+.panel .label{color:var(--muted)}
+.btn{border:2px solid var(--ink); background:var(--gold); color:var(--ink); border-radius:10px; padding:10px 16px; font-weight:800;
+  box-shadow:3px 3px 0 var(--ink); transition:transform .08s, box-shadow .08s}
+.btn:hover:not(:disabled){transform:translate(-1px,-1px); box-shadow:4px 4px 0 var(--ink)}
+.btn:active:not(:disabled){transform:translate(2px,2px); box-shadow:1px 1px 0 var(--ink)}
+.btn:disabled{opacity:.4}
+.btn.white{background:var(--paper)}
+.btn.hot{background:var(--hot); color:#fff}
+.btn.big{font-size:18px; padding:13px 22px}
+.btn.ghost{background:transparent; color:#fff; border-color:#fff; box-shadow:none}
+input[type=text]{border:2px solid var(--ink); border-radius:10px; padding:10px 12px; font:600 16px var(--body); width:100%; background:var(--paper2); color:var(--ink)}
+
+/* Home */
+.home{display:grid; gap:22px}
+.hero-line{font-size:18px; max-width:62ch; color:#fff}
+.hero-line b{color:var(--gold)}
+.themes{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px}
+.theme{text-align:left; background:var(--paper); color:var(--ink); border:2px solid var(--ink); border-radius:14px; padding:14px;
+  box-shadow:4px 4px 0 var(--ink); display:grid; gap:10px; transition:transform .08s}
+.theme:hover{transform:translate(-1px,-1px)}
+.theme.on{background:var(--gold); box-shadow:6px 6px 0 var(--ink)}
+.theme h3{margin:0; font-family:var(--display); font-size:22px; font-weight:400; line-height:1}
+.theme p{margin:0; font-size:13px; color:var(--muted)}
+.theme.on p{color:var(--ink)}
+.mini{display:grid; gap:4px}
+.mini div{display:flex; justify-content:space-between; font-size:13px; font-weight:600; border-bottom:1px dashed rgba(12,15,46,.2); padding-bottom:3px}
+.mini span:last-child{font-family:var(--mono); font-weight:700}
+.seg{display:inline-flex; border:2px solid var(--ink); border-radius:12px; overflow:hidden; box-shadow:3px 3px 0 var(--ink); flex-wrap:wrap}
+.seg button{border:0; background:var(--paper); color:var(--ink); padding:10px 16px; font-weight:800; text-align:left}
+.seg button + button{border-left:2px solid var(--ink)}
+.seg button.on{background:var(--gold)}
+.seg button small{display:block; font-weight:600; font-size:12px; color:var(--muted)}
+.seg button.on small{color:var(--ink)}
+.modes{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px}
+.stepper{display:inline-flex; align-items:center; gap:10px}
+.stepper button{width:36px; height:36px; border:2px solid var(--ink); border-radius:8px; background:var(--paper2); font-weight:800; font-size:18px}
+.stepper b{font:700 22px var(--mono); min-width:24px; text-align:center}
+.row{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+.panel h2{margin:0 0 4px; font-family:var(--display); font-weight:400; font-size:24px; line-height:1.05}
+.panel .sub{margin:0 0 14px; color:var(--muted); font-size:14px}
+.or{font-size:12px; font-weight:800; color:var(--muted); letter-spacing:1px; margin:14px 0 8px}
+.codein{max-width:140px; text-transform:uppercase; font-family:var(--mono)!important; letter-spacing:4px}
+.how{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:0; padding:0; list-style:none; counter-reset:s}
+.how li{counter-increment:s; border-top:2px solid var(--line); padding-top:10px; font-size:14px; color:var(--soft)}
+.how li::before{content:counter(s); display:block; font-family:var(--display); color:var(--gold); font-size:22px; line-height:1; margin-bottom:4px}
+.how b{color:#fff}
+.note{font-size:13px; color:var(--muted); margin-top:10px}
+
+/* Lobby */
+.lobby{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.2fr); gap:18px}
+.code{font:700 clamp(44px,10vw,76px)/1 var(--mono); letter-spacing:10px; color:var(--ink); background:var(--gold); border:2px solid var(--ink);
+  border-radius:12px; padding:12px 16px; display:inline-block; box-shadow:4px 4px 0 var(--ink)}
+.plist{display:grid; gap:8px; margin:0; padding:0; list-style:none}
+.plist li{display:flex; align-items:center; gap:10px; border:2px solid var(--ink); border-radius:10px; padding:8px 12px; background:var(--paper2); font-weight:700}
+.plist li .grow{flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.tagsm{font-size:10px; font-weight:800; letter-spacing:1px; border-radius:5px; padding:2px 6px; background:var(--ink); color:#fff}
+.tagsm.you{background:var(--ok)}
+.tagsm.bot{background:var(--muted)}
+.tagsm.host{background:var(--hot)}
+
+/* Game */
+.stage{margin-bottom:18px}
+.turn{display:flex; align-items:center; gap:16px; flex-wrap:wrap; justify-content:space-between}
+.turn h2{font-size:clamp(22px,4vw,32px)}
+.timer{font:700 26px var(--mono); min-width:54px; text-align:right}
+.timer.urgent{color:var(--hot)}
+.bar{height:8px; border-radius:99px; background:var(--paper2); border:2px solid var(--ink); overflow:hidden; margin-top:12px}
+.bar i{display:block; height:100%; background:var(--ok); width:100%; transition:width .2s linear}
+.bar i.urgent{background:var(--hot)}
+.confirm{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px; padding-top:12px; border-top:2px dashed rgba(12,15,46,.2)}
+.lot{display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:18px; align-items:center}
+.lot .ava{width:84px; height:84px; font-size:40px; border-radius:18px}
+.lot .ava.init{font-size:26px}
+.lot h2{font-size:clamp(24px,4.5vw,38px)}
+.lot .meta{color:var(--muted); font-weight:700}
+.bidnow{text-align:right}
+.bidnow .amt{font:700 clamp(40px,8vw,64px)/1 var(--mono)}
+.bidnow .who{font-weight:800; font-size:14px}
+.bids{display:flex; gap:8px; flex-wrap:wrap; margin-top:14px; align-items:center}
+.sold{font-family:var(--display); font-size:clamp(28px,6vw,48px); line-height:1; transform:rotate(-2deg); display:inline-block; background:var(--hot); color:#fff; padding:6px 14px; border:2px solid var(--ink); border-radius:8px; box-shadow:4px 4px 0 var(--ink)}
+.sold.none{background:var(--muted)}
+
+.layout{display:grid; grid-template-columns:minmax(0,1fr) 330px; gap:18px; align-items:start}
+.sec-head{display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:10px}
+.filters{display:flex; gap:6px; flex-wrap:wrap}
+.filters button{border:2px solid #fff; background:transparent; color:#fff; border-radius:999px; padding:3px 11px; font-weight:800; font-size:12px}
+.filters button.on{background:#fff; color:var(--ink)}
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(148px,1fr)); gap:12px}
+.card{position:relative; text-align:left; background:var(--paper); color:var(--ink); border:2px solid var(--ink); border-radius:12px; padding:12px 10px 10px;
+  box-shadow:3px 3px 0 var(--ink); display:grid; gap:6px; align-content:start; min-height:128px; transition:transform .08s, box-shadow .08s}
+button.card:hover:not(:disabled){transform:translate(-2px,-2px); box-shadow:5px 5px 0 var(--ink)}
+.card:disabled{opacity:.38}
+.card.sel{background:var(--gold); box-shadow:5px 5px 0 var(--ink); transform:translate(-2px,-2px)}
+.card.next{outline:3px dashed var(--gold); outline-offset:2px}
+.card .nm{font-weight:800; font-size:15px; line-height:1.15; padding-right:44px; text-wrap:balance}
+.card .meta{font-size:12px; font-weight:700; color:var(--muted); display:flex; gap:6px; align-items:center}
+.price{position:absolute; top:-8px; right:-6px; background:var(--gold); color:var(--ink); border:2px solid var(--ink); border-radius:6px;
+  font:700 14px var(--mono); padding:2px 7px; transform:rotate(4deg); box-shadow:2px 2px 0 var(--ink)}
+.card.sel .price{background:var(--paper)}
+.ava{display:grid; place-items:center; width:40px; height:40px; border-radius:10px; border:2px solid var(--ink); background:var(--c,var(--paper2)); font-size:22px; line-height:1}
+.ava.init{font:700 14px var(--mono); color:var(--ink)}
+.dot{width:9px; height:9px; border-radius:50%; background:var(--c); border:1.5px solid var(--ink); display:inline-block}
+.upnext{font-size:10px; font-weight:800; letter-spacing:1px; color:var(--hot)}
+
+.teams{display:grid; gap:12px}
+.team{background:var(--paper); color:var(--ink); border:2px solid var(--ink); border-radius:12px; padding:12px; box-shadow:3px 3px 0 var(--ink)}
+.team.active{background:var(--gold); box-shadow:5px 5px 0 var(--ink)}
+.team .hd{display:flex; align-items:center; gap:8px}
+.team .hd .grow{flex:1; min-width:0; font-weight:800; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.money{font:700 20px var(--mono)}
+.team .st{display:flex; justify-content:space-between; font-size:12px; font-weight:700; color:var(--muted); margin:6px 0; font-variant-numeric:tabular-nums}
+.team.active .st{color:var(--ink)}
+.slots{display:flex; flex-wrap:wrap; gap:4px}
+.slot{width:28px; height:28px; border-radius:7px; border:2px solid var(--ink); background:var(--c,var(--paper2)); display:grid; place-items:center; font-size:15px}
+.slot.init{font:700 9px var(--mono)}
+.slot.empty{background:transparent; border-style:dashed; opacity:.35}
+.combos{margin-top:18px}
+.combo-list{display:grid; gap:6px; margin:0; padding:0; list-style:none}
+.combo-list li{display:flex; justify-content:space-between; gap:10px; font-size:13px; border-bottom:1px dashed var(--line); padding-bottom:5px; color:var(--soft)}
+.combo-list li b{color:#fff}
+.combo-list .pts{font:700 13px var(--mono); color:var(--gold); white-space:nowrap}
+.combo-list .pts.neg{color:var(--hot)}
+.log{margin-top:18px; font-size:13px; color:var(--soft); display:grid; gap:3px}
+.log div:first-child{color:#fff; font-weight:700}
+
+/* End */
+.podium{display:grid; gap:14px}
+.result{display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:14px; align-items:start}
+.rank{font-family:var(--display); font-size:40px; line-height:1; color:var(--ink); width:44px}
+.result.win{background:var(--gold)}
+.total{font:700 34px/1 var(--mono); text-align:right}
+.total small{display:block; font:800 11px var(--body); letter-spacing:1px; color:var(--muted); text-transform:uppercase; margin-top:4px}
+.picks{display:flex; flex-wrap:wrap; gap:6px; margin:8px 0}
+.pk{display:inline-flex; align-items:center; gap:5px; border:1.5px solid var(--ink); border-radius:7px; padding:2px 7px; background:var(--paper); font-size:12px; font-weight:700}
+.pk span{font-family:var(--mono); color:var(--muted)}
+.breakdown{display:grid; gap:2px; font-size:13px; max-width:420px}
+.breakdown div{display:flex; justify-content:space-between; gap:10px}
+.breakdown .v{font-family:var(--mono); font-weight:700}
+.breakdown .neg{color:#c21f3a}
+.breakdown .pos{color:#0b7a4b}
+.center-msg{text-align:center; padding-block:60px; display:grid; gap:14px; justify-items:center}
+.toast{position:fixed; left:50%; bottom:calc(20px + env(safe-area-inset-bottom,0px)); transform:translateX(-50%); background:var(--ink); color:#fff; border:2px solid #fff;
+  padding:10px 16px; border-radius:10px; font-weight:700; z-index:9; max-width:calc(100% - 32px)}
+/* Category picker */
+.cats{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px}
+.cat{text-align:left; background:var(--paper); color:var(--ink); border:3px solid var(--ink); border-radius:18px; padding:16px; box-shadow:6px 6px 0 var(--ink);
+  display:grid; gap:12px; transition:transform .1s, box-shadow .1s}
+.cat:hover{transform:translate(-3px,-3px) rotate(-.6deg); box-shadow:9px 9px 0 var(--ink)}
+.cat h3{margin:0; font:400 34px/1 var(--display)}
+.cat p{margin:0; color:var(--muted); font-weight:600}
+.fan{display:flex; height:120px; align-items:flex-end}
+.fan .portrait{width:78px; flex:none; border-radius:10px; box-shadow:2px 2px 0 var(--ink)}
+.fan .portrait + .portrait{margin-left:-26px}
+.fan .portrait:nth-child(1){transform:rotate(-8deg)}
+.fan .portrait:nth-child(2){transform:rotate(-3deg) translateY(-6px)}
+.fan .portrait:nth-child(3){transform:rotate(2deg) translateY(-10px)}
+.fan .portrait:nth-child(4){transform:rotate(7deg) translateY(-4px)}
+.fan .portrait b{font-size:24px}
+.fan .portrait span{display:none}
+.back{border:0; background:none; color:#fff; font-weight:800; padding:0; text-decoration:underline; text-underline-offset:3px}
+
+/* Portrait art */
+.portrait{position:relative; aspect-ratio:4/5; width:100%; max-width:100%; border:2px solid var(--ink); border-radius:12px; overflow:hidden;
+  background:
+    radial-gradient(rgba(255,255,255,.28) 1.2px, transparent 1.6px) 0 0/9px 9px,
+    repeating-conic-gradient(from 0deg at 50% 60%, rgba(255,255,255,.14) 0 4deg, transparent 4deg 12deg),
+    linear-gradient(150deg, var(--c1), var(--c2));
+  display:grid; place-items:center}
+.portrait b{font:400 clamp(34px,6vw,54px)/1 var(--display); color:#fff; text-shadow:3px 3px 0 var(--ink); -webkit-text-stroke:1.5px var(--ink); letter-spacing:1px}
+.portrait span{position:absolute; left:6px; bottom:6px; right:6px; background:var(--ink); color:#fff; font-size:10px; font-weight:800; letter-spacing:.8px;
+  text-transform:uppercase; border-radius:5px; padding:2px 6px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:max-content; max-width:calc(100% - 12px)}
+.portrait.food{font-size:clamp(48px,8vw,72px)}
+
+/* Hand of 5 */
+.hand{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:14px; margin-top:16px}
+.hcard{position:relative; text-align:left; background:var(--paper); color:var(--ink); border:2px solid var(--ink); border-radius:14px; padding:8px 8px 10px;
+  box-shadow:4px 4px 0 var(--ink); display:grid; gap:6px; align-content:start; transition:transform .1s, box-shadow .1s; animation:deal .35s both}
+.hcard:nth-child(2){animation-delay:.05s}.hcard:nth-child(3){animation-delay:.1s}.hcard:nth-child(4){animation-delay:.15s}.hcard:nth-child(5){animation-delay:.2s}
+@keyframes deal{from{transform:translateY(14px) rotate(-3deg)}to{transform:none}}
+button.hcard:hover:not(:disabled){transform:translate(-3px,-3px); box-shadow:7px 7px 0 var(--ink)}
+.hcard:disabled{opacity:.4}
+.hcard.sel{background:var(--gold); transform:translate(-3px,-5px); box-shadow:7px 9px 0 var(--ink)}
+.hcard .nm{font-weight:800; font-size:15px; line-height:1.15; text-wrap:balance}
+.hcard .meta{font-size:12px; font-weight:700; color:var(--muted)}
+.hcard .price{top:-10px; right:-8px; font-size:16px}
+.hcard .cant{font-size:11px; font-weight:800; color:#c21f3a}
+@media (max-width:860px){ .hand{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))} }
+@media (max-width:860px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .teams{grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); order:-1}
+  .lobby{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  .lot{grid-template-columns:auto minmax(0,1fr)}
+  .bidnow{grid-column:1 / -1; text-align:left}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(132px,1fr))}
+  .result{grid-template-columns:auto minmax(0,1fr)}
+  .result .total{grid-column:1 / -1; text-align:left}
+}
+@media (prefers-reduced-motion:reduce){ *{transition:none!important} }
+</style>
+</head>
+<body>
+
+<div class="wrap" id="app"></div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(function(){
+"use strict";
+const MAXP=5, BID_MS=5000, LOT_MS=9000, SOLD_MS=2200, TURN_MS=30000;
+const mk=rows=>rows.map(([n,p,r,t,e])=>({n,p,r,t,e:e||""}));
+
+/* ---------------- Markets ---------------- */
+function foodRules(cfg){
+  return its=>{
+    const c={}; its.forEach(x=>c[x.t]=(c[x.t]||0)+1); const out=[];
+    cfg.must.forEach(([k,l,v])=>{ if(!c[k]) out.push([l,v]); });
+    cfg.nice.forEach(([k,l,v])=>{ if(c[k]) out.push([l,v]); });
+    cfg.one.forEach(([k,l,v])=>{ if(c[k]>1) out.push([l,v*(c[k]-1)]); });
+    return out;
+  };
+}
+const THEMES={
+  anime:{
+    label:"Anime", blurb:"Assemble a squad of six. Gojo and Goku cost $30.", slots:6, kind:"anime", base:80, pw:.8, rate:"Power",
+    bots:["Senpai","Sensei","Otaku-kun","Chibi","Waifu Lord"],
+    cats:{FTR:["Fighter","#ff7a8f"],BRN:["Brains","#3ec7ff"],SUP:["Support","#19c37d"],VIL:["Villain","#b388ff"]},
+    series:{dbz:["Dragon Ball","#ff9f1c","#e63946"],nar:["Naruto","#f77f00","#1d3557"],op:["One Piece","#e63946","#ffb703"],
+      jjk:["Jujutsu Kaisen","#7b2cbf","#3a86ff"],aot:["Attack on Titan","#7f8c5a","#283618"],ds:["Demon Slayer","#2a9d8f","#e76f51"],
+      mha:["My Hero Academia","#06d6a0","#118ab2"],opm:["One Punch Man","#ffd60a","#ef476f"],csm:["Chainsaw Man","#ff4d6d","#590d22"],
+      dn:["Death Note","#495057","#111418"],hxh:["Hunter x Hunter","#80b918","#1b6b3a"],bl:["Bleach","#ff7b00","#1a1a1a"],
+      fma:["Fullmetal Alchemist","#c1121f","#f4a261"],sxf:["Spy x Family","#ff8fab","#1b4332"],kono:["KonoSuba","#4cc9f0","#f72585"],
+      bc:["Black Clover","#52796f","#1b1b1b"]},
+    items:mk([
+      ["Goku",30,98,"FTR","dbz"],["Vegeta",24,95,"FTR","dbz"],["Frieza",20,94,"VIL","dbz"],["Krillin",5,70,"FTR","dbz"],["Mr. Satan",2,40,"SUP","dbz"],
+      ["Naruto",26,95,"FTR","nar"],["Sasuke",24,94,"FTR","nar"],["Madara",26,96,"VIL","nar"],["Itachi",22,93,"VIL","nar"],["Kakashi",16,88,"BRN","nar"],
+      ["Rock Lee",8,78,"FTR","nar"],["Sakura",6,72,"SUP","nar"],
+      ["Luffy",28,96,"FTR","op"],["Zoro",20,92,"FTR","op"],["Sanji",16,88,"FTR","op"],["Nami",6,65,"BRN","op"],["Usopp",4,58,"SUP","op"],
+      ["Gojo",30,98,"FTR","jjk"],["Sukuna",30,99,"VIL","jjk"],["Yuji",14,85,"FTR","jjk"],["Megumi",10,80,"BRN","jjk"],
+      ["Levi",18,90,"FTR","aot"],["Eren",16,88,"VIL","aot"],["Mikasa",14,87,"FTR","aot"],["Armin",6,70,"BRN","aot"],
+      ["Rengoku",18,90,"FTR","ds"],["Muzan",20,92,"VIL","ds"],["Tanjiro",14,85,"FTR","ds"],["Nezuko",10,80,"SUP","ds"],["Zenitsu",8,78,"FTR","ds"],["Inosuke",8,77,"FTR","ds"],
+      ["All Might",22,94,"FTR","mha"],["Deku",16,88,"FTR","mha"],["Bakugo",14,86,"FTR","mha"],["Todoroki",14,86,"FTR","mha"],
+      ["Saitama",30,100,"FTR","opm"],["Genos",10,80,"FTR","opm"],
+      ["Makima",22,93,"VIL","csm"],["Denji",12,82,"FTR","csm"],["Power",8,76,"FTR","csm"],
+      ["L",14,88,"BRN","dn"],["Light Yagami",14,85,"VIL","dn"],
+      ["Killua",14,86,"FTR","hxh"],["Gon",12,84,"FTR","hxh"],
+      ["Aizen",24,95,"VIL","bl"],["Ichigo",20,92,"FTR","bl"],
+      ["Edward Elric",12,84,"BRN","fma"],
+      ["Yor",14,86,"FTR","sxf"],["Loid",12,82,"BRN","sxf"],["Anya",6,68,"SUP","sxf"],
+      ["Megumin",5,72,"FTR","kono"],["Kazuma",4,55,"BRN","kono"],["Aqua",3,50,"SUP","kono"],
+      ["Asta",10,82,"FTR","bc"]
+    ]),
+    combos:[
+      ["Team 7",["Naruto","Sasuke","Sakura","Kakashi"],15],
+      ["Monster Trio",["Luffy","Zoro","Sanji"],12],
+      ["Kamaboko squad",["Tanjiro","Nezuko","Zenitsu","Inosuke"],12],
+      ["Forger family",["Loid","Yor","Anya"],12],
+      ["KonoSuba party",["Kazuma","Aqua","Megumin"],12],
+      ["Uchiha clan",["Itachi","Sasuke","Madara"],10],
+      ["Saiyan pride",["Goku","Vegeta"],8],
+      ["Hunter duo",["Gon","Killua"],7],
+      ["Strongest vs King of Curses",["Gojo","Sukuna"],6],
+      ["Rivals",["Deku","Bakugo"],6]
+    ],
+    rules:its=>{
+      const c={FTR:0,BRN:0,SUP:0,VIL:0}; its.forEach(x=>c[x.t]++); const out=[];
+      if(!c.FTR) out.push(["No fighters",-20]);
+      if(c.BRN) out.push(["Has a strategist",6]);
+      if(c.SUP) out.push(["Has support",6]);
+      if(c.VIL>=2) out.push(["Villain arc",8]);
+      if(c.FTR>=5) out.push(["All muscle, no plan",-8]);
+      return out;
+    }
+  },
+  football:{
+    label:"Football XI", blurb:"Sign a starting eleven. Stars cost $10.", slots:11, kind:"football", base:75, pw:1.6, rate:"OVR",
+    bots:["Pep","Zizou","Carlo","Xabi","Mikel"],
+    cats:{GK:["Keepers","#ffb020"],DEF:["Defenders","#3ec7ff"],MID:["Midfield","#19c37d"],FWD:["Forwards","#ff7a8f"]},
+    items:mk([
+      ["Messi",10,91,"FWD"],["Ronaldo",10,88,"FWD"],["Mbappé",10,92,"FWD"],["Haaland",10,91,"FWD"],["Neymar",9,87,"FWD"],
+      ["Vinícius Jr",9,90,"FWD"],["Yamal",9,89,"FWD"],["Kane",8,89,"FWD"],["Salah",8,89,"FWD"],["Bale",7,84,"FWD"],
+      ["Benzema",7,86,"FWD"],["Lewandowski",7,88,"FWD"],["Saka",7,87,"FWD"],["Suárez",6,84,"FWD"],["Griezmann",5,86,"FWD"],
+      ["Son",5,86,"FWD"],["Rashford",3,81,"FWD"],["Grealish",3,82,"FWD"],["Núñez",3,80,"FWD"],["Richarlison",2,79,"FWD"],
+      ["Bellingham",9,89,"MID"],["Rodri",8,90,"MID"],["De Bruyne",8,88,"MID"],["Modrić",7,86,"MID"],["Musiala",7,87,"MID"],
+      ["Pedri",6,86,"MID"],["Kimmich",6,86,"MID"],["Rice",5,86,"MID"],["De Jong",5,85,"MID"],["Bruno F.",5,86,"MID"],
+      ["Casemiro",4,83,"MID"],["Mount",2,78,"MID"],["Henderson",2,79,"MID"],["Phillips",2,76,"MID"],
+      ["Van Dijk",7,89,"DEF"],["Rúben Dias",6,88,"DEF"],["Saliba",6,87,"DEF"],["Hakimi",6,85,"DEF"],["Rüdiger",5,86,"DEF"],
+      ["Theo",5,85,"DEF"],["Trent",5,86,"DEF"],["Marquinhos",4,85,"DEF"],["Walker",4,84,"DEF"],["Ramos",4,84,"DEF"],
+      ["Maguire",3,79,"DEF"],["Trippier",3,81,"DEF"],["Ben White",2,80,"DEF"],["Chilwell",2,78,"DEF"],
+      ["Alisson",6,89,"GK"],["Courtois",6,89,"GK"],["Donnarumma",5,88,"GK"],["Ter Stegen",5,87,"GK"],["Ederson",4,87,"GK"],
+      ["Raya",3,84,"GK"],["Pickford",3,82,"GK"],["Ramsdale",2,80,"GK"]
+    ]),
+    combos:[
+      ["MSN",["Messi","Suárez","Neymar"],12],
+      ["BBC",["Bale","Benzema","Ronaldo"],12],
+      ["The GOAT debate",["Messi","Ronaldo"],6],
+      ["City machine",["Rodri","De Bruyne","Haaland","Rúben Dias"],10],
+      ["Madrid spine",["Courtois","Rüdiger","Bellingham","Vinícius Jr"],8],
+      ["Three Lions",["Kane","Saka","Rice","Bellingham"],8],
+      ["Arsenal core",["Saka","Rice","Saliba","Raya"],8]
+    ],
+    rules:its=>{
+      const c={GK:0,DEF:0,MID:0,FWD:0}; its.forEach(x=>c[x.t]++); const out=[];
+      if(!c.GK) out.push(["No goalkeeper",-25]);
+      if(c.GK>1) out.push([(c.GK-1)+" spare keeper"+(c.GK>2?"s":""),-15*(c.GK-1)]);
+      let q=(c.GK>=1)+(c.DEF>=3)+(c.MID>=3)+(c.FWD>=2);
+      if(q) out.push(["Formation "+q+"/4 lines filled",q*5]);
+      if(c.FWD>4) out.push(["Too many strikers",-8*(c.FWD-4)]);
+      return out;
+    }
+  },
+  pizza:{
+    label:"Pizza", blurb:"Crust, sauce, cheese, toppings. Six slots.", slots:6, kind:"food", base:4, pw:.35, rate:"Taste",
+    bots:["Nonna","Luigi","Gordon","Remy","Sofia"],
+    cats:{base:["Crust","#ffd9a0"],sauce:["Sauce","#ffb3a7"],cheese:["Cheese","#fff1a8"],topping:["Toppings","#c8f0c2"],finish:["Finish","#d7d3ff"]},
+    items:mk([
+      ["Neapolitan dough",18,8,"base","🫓"],["Sourdough crust",14,7,"base","🍞"],["Stuffed crust",10,6,"base","🥯"],
+      ["Deep dish",12,6,"base","🥧"],["Thin & crispy",8,5,"base","🫓"],["Cauliflower crust",4,2,"base","🥦"],
+      ["San Marzano",12,7,"sauce","🍅"],["Vodka sauce",11,7,"sauce","🍸"],["Pesto",10,6,"sauce","🌿"],
+      ["Garlic cream",8,5,"sauce","🧄"],["BBQ sauce",5,3,"sauce","🍖"],
+      ["Burrata",20,9,"cheese","🧀"],["Buffalo mozzarella",16,8,"cheese","🧀"],["Parmigiano",10,6,"cheese","🧀"],
+      ["Gorgonzola",9,5,"cheese","🧀"],["Ricotta",7,5,"cheese","🥛"],["Plastic cheddar",3,2,"cheese","🟧"],
+      ["Pepperoni",14,8,"topping","🍕"],["Prosciutto",15,7,"topping","🥓"],["Spicy salami",12,7,"topping","🌶️"],
+      ["Sausage",9,6,"topping","🌭"],["Chicken tikka",8,5,"topping","🍗"],["Ham",7,4,"topping","🍖"],
+      ["Mushrooms",6,5,"topping","🍄"],["Caramelized onion",6,5,"topping","🧅"],["Jalapeños",5,4,"topping","🌶️"],
+      ["Anchovies",5,3,"topping","🐟"],["Pineapple",4,3,"topping","🍍"],["Black olives",4,3,"topping","🫒"],
+      ["Truffle oil",22,8,"finish","✨"],["Hot honey",10,7,"finish","🍯"],["Fresh basil",5,5,"finish","🌱"],
+      ["Rocket",4,3,"finish","🥬"],["Ranch drizzle",3,2,"finish","🥣"]
+    ]),
+    combos:[
+      ["Margherita",["San Marzano","Buffalo mozzarella","Fresh basil"],12],
+      ["Hot honey pepperoni",["Pepperoni","Hot honey"],8],
+      ["Truffle shroom",["Truffle oil","Mushrooms"],7],
+      ["Pesto & burrata",["Pesto","Burrata"],6],
+      ["Hawaiian",["Ham","Pineapple"],5],
+      ["Crime scene",["Pineapple","Anchovies"],-10]
+    ],
+    rules:foodRules({must:[["base","No crust (that's a salad)",-15]],nice:[["sauce","Has sauce",4],["cheese","Has cheese",4]],one:[["base","Extra crust",-8],["sauce","Sauce clash",-4]]})
+  },
+  burger:{
+    label:"Burger", blurb:"Bun, patty, cheese, the works. Six slots.", slots:6, kind:"food", base:4, pw:.35, rate:"Taste",
+    bots:["Smash Bro","Chef Bao","Patty","Mac","Rosie"],
+    cats:{bun:["Buns","#ffd9a0"],patty:["Patties","#e8b9a0"],cheese:["Cheese","#fff1a8"],topping:["Toppings","#c8f0c2"],sauce:["Sauce","#ffb3a7"]},
+    items:mk([
+      ["Brioche bun",14,8,"bun","🍞"],["Potato bun",10,7,"bun","🥔"],["Pretzel bun",9,6,"bun","🥨"],
+      ["Sesame bun",6,5,"bun","🍔"],["Lettuce wrap",3,2,"bun","🥬"],
+      ["Wagyu patty",30,10,"patty","🥩"],["Double patty",24,9,"patty","🍔"],["Smash patty",18,8,"patty","🥩"],
+      ["Fried chicken",14,7,"patty","🍗"],["Beyond patty",10,5,"patty","🌱"],["Bean patty",5,3,"patty","🫘"],
+      ["Aged cheddar",9,7,"cheese","🧀"],["American cheese",6,7,"cheese","🟨"],["Blue cheese",8,5,"cheese","🧀"],
+      ["Pepper jack",7,6,"cheese","🌶️"],["Swiss",7,5,"cheese","🧀"],
+      ["Crispy bacon",14,8,"topping","🥓"],["Avocado",10,6,"topping","🥑"],["Fried egg",8,6,"topping","🍳"],
+      ["Onion rings",8,6,"topping","🧅"],["Caramelized onions",7,6,"topping","🧅"],["Mushrooms",6,5,"topping","🍄"],
+      ["Jalapeños",4,4,"topping","🌶️"],["Pickles",3,5,"topping","🥒"],["Pineapple",4,2,"topping","🍍"],
+      ["Tomato",2,3,"topping","🍅"],["Lettuce",2,2,"topping","🥬"],
+      ["Truffle mayo",12,7,"sauce","✨"],["Special sauce",8,7,"sauce","🥫"],["Sriracha mayo",6,6,"sauce","🌶️"],
+      ["BBQ sauce",5,5,"sauce","🍖"],["Ketchup",2,3,"sauce","🍅"]
+    ]),
+    combos:[
+      ["Classic smash",["Smash patty","American cheese","Pickles","Special sauce"],14],
+      ["Truffle shroom",["Truffle mayo","Mushrooms","Swiss"],10],
+      ["Bacon cheeseburger",["Crispy bacon","Aged cheddar"],6],
+      ["Breakfast burger",["Fried egg","Crispy bacon"],6],
+      ["Why?",["Pineapple","Blue cheese"],-8]
+    ],
+    rules:foodRules({must:[["patty","No patty",-15],["bun","No bun",-8]],nice:[["cheese","Cheesy",4],["sauce","Sauced",3]],one:[["bun","Too many buns",-8]]})
+  }
+};
+
+/* ---------------- State ---------------- */
+const app=document.getElementById("app");
+let S=null;                 // game state (authoritative for solo/host, mirror for guest)
+let role=null;              // "solo" | "host" | "guest"
+let myId=null;
+let myName=load("hdd-name")||"";
+let setup={theme:"anime",mode:"draft",bots:3}, homeStep="pick";
+let joinCode="", selected=null, filter="all";
+let roomApi=null, roomReady=false, R=null, hostPeer=null, myPeer=null, guestDeadline=null;
+let botAt=0, botVals={}, emitTimer=null, helloTimer=null, joinTimeout=null;
+
+function load(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function save(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const clip=s=>String(s||"").replace(/[\u0000-\u001f]/g,"").trim().slice(0,16);
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const T=()=>THEMES[S.theme];
+const item=i=>T().items[i];
+const initials=n=>{const w=n.replace(/\./g,"").split(/\s+/);return (w.length>1?w[0][0]+w[1][0]:w[0].slice(0,2)).toUpperCase()};
+const minPrice=()=>S.mode==="auction"?1:Math.min(...T().items.map(x=>x.p));
+const slotsLeft=p=>T().slots-p.picks.length;
+const maxSpend=p=>slotsLeft(p)>0?p.money-minPrice()*(slotsLeft(p)-1):0;
+const canAfford=(p,i)=>slotsLeft(p)>0&&item(i).p<=maxSpend(p);
+const candidates=p=>S.pool.filter(i=>canAfford(p,i));
+const isAuth=()=>role==="solo"||role==="host";
+const me=()=>S&&S.players?S.players.find(p=>p.id===myId):null;
+
+function score(tk,picks){
+  const th=THEMES[tk]; const its=picks.map(i=>th.items[i]);
+  const base=its.reduce((s,x)=>s+x.r,0);
+  const lines=th.rules(its).map(([l,v])=>({l,v}));
+  const names=new Set(its.map(x=>x.n));
+  th.combos.forEach(([l,need,v])=>{ if(need.every(n=>names.has(n))) lines.push({l,v,combo:1}); });
+  return {base,lines,total:base+lines.reduce((s,x)=>s+x.v,0)};
+}
+const gain=(p,i)=>score(S.theme,p.picks.concat(i)).total-score(S.theme,p.picks).total-T().base;
+
+/* ---------------- Engine (runs on solo/host) ---------------- */
+function newGame(players){
+  const th=THEMES[S.theme]; const idx=th.items.map((_,i)=>i);
+  S.players=shuffle(players).map(p=>({id:p.id,name:p.name,bot:!!p.bot,money:100,picks:[]}));
+  S.pool=S.mode==="auction"?shuffle(idx):idx.sort((a,b)=>th.items[b].p-th.items[a].p||th.items[b].r-th.items[a].r);
+  S.phase="play"; S.log=[]; S.round=1; S.pos=-1; S.dir=1; S.turn=0; S.lot=0; S.auction=null; S.last=null; S.ends=null; S.hand=[];
+  S.turnMs=role==="solo"?null:TURN_MS;
+  botAt=0; botVals={}; selected=null; filter="all";
+  if(S.mode==="draft") nextDraftTurn(); else nextLot();
+}
+function log(m){S.log=[m].concat(S.log||[]).slice(0,5)}
+function nextDraftTurn(){
+  const n=S.players.length;
+  for(let k=0;k<n*2+2;k++){
+    S.pos+=S.dir;
+    if(S.pos>=n){S.pos=n-1;S.dir=-1;S.round++}
+    else if(S.pos<0){S.pos=0;S.dir=1;S.round++}
+    if(candidates(S.players[S.pos]).length){
+      S.turn=S.pos; const p=S.players[S.pos];
+      dealHand(p);
+      S.ends=(!p.bot&&S.turnMs)?Date.now()+S.turnMs:null; return;
+    }
+  }
+  endGame();
+}
+// Deal 5 random cards: prefer a spread of prices, and always at least one this player can afford.
+function dealHand(p){
+  let best=null, bs=-1;
+  for(let t=0;t<30;t++){
+    const h=shuffle(S.pool).slice(0,5);
+    const aff=h.filter(i=>canAfford(p,i)).length, dist=new Set(h.map(i=>item(i).p)).size;
+    const s=(aff?20:0)+Math.min(aff,3)*2+dist;
+    if(s>bs){bs=s;best=h}
+  }
+  if(!best.some(i=>canAfford(p,i))){
+    const c=candidates(p).filter(i=>!best.includes(i));
+    if(c.length) best[best.length-1]=c[Math.random()*c.length|0];
+  }
+  S.hand=shuffle(best);
+}
+function botPick(p){
+  let c=(S.hand||[]).filter(i=>canAfford(p,i)); if(!c.length) c=candidates(p); if(!c.length) return null;
+  const per=p.money/slotsLeft(p); let best=c[0], bv=-1e9;
+  c.forEach(i=>{ const it=item(i); const v=gain(p,i)*(0.85+Math.random()*0.3)-Math.max(0,it.p-per*1.25)*T().pw; if(v>bv){bv=v;best=i} });
+  return best;
+}
+function doPick(p,i,auto){
+  if(S.phase!=="play"||S.mode!=="draft"||S.players[S.turn]!==p) return;
+  if(i==null||!S.pool.includes(i)||!canAfford(p,i)) return;
+  if(S.hand&&S.hand.length&&!S.hand.includes(i)&&S.hand.some(h=>canAfford(p,h))) return;
+  const it=item(i); p.picks.push(i); p.money-=it.p; S.pool=S.pool.filter(x=>x!==i);
+  log(p.name+(auto?" ran out of time, auto-picked ":" drafted ")+it.n+" for $"+it.p);
+  botAt=0; if(p.id===myId) selected=null;
+  nextDraftTurn(); commit();
+}
+const maxBid=p=>slotsLeft(p)>0?p.money-(slotsLeft(p)-1):0;
+function nextLot(){
+  if(!S.pool.length||S.players.every(p=>maxBid(p)<1)){endGame();return}
+  S.lot++; S.auction={item:S.pool.shift(),bid:0,lead:null}; S.phase="play"; S.ends=Date.now()+LOT_MS; botVals={};
+}
+function doBid(p,amt){
+  const a=S.auction; if(S.phase!=="play"||S.mode!=="auction"||!a) return;
+  amt=Math.floor(amt); if(!(amt>a.bid)||amt>maxBid(p)||a.lead===p.id) return;
+  a.bid=amt; a.lead=p.id; S.ends=Math.max(S.ends,Date.now()+BID_MS); commit();
+}
+function resolveLot(){
+  const a=S.auction, it=item(a.item), p=S.players.find(x=>x.id===a.lead);
+  if(p){p.picks.push(a.item);p.money-=a.bid;S.last={i:a.item,who:p.name,price:a.bid};log(p.name+" won "+it.n+" for $"+a.bid)}
+  else{S.last={i:a.item,who:null,price:0};log("No bids on "+it.n)}
+  S.phase="sold"; S.ends=Date.now()+SOLD_MS;
+}
+function botVal(b){
+  const k=S.lot+":"+b.id;
+  if(botVals[k]==null){
+    const it=item(S.auction.item); let v=it.p*(0.7+Math.random()*0.6);
+    if(gain(b,S.auction.item)<=0) v*=0.25;
+    const rich=(maxBid(b)/Math.max(1,slotsLeft(b)))/(100/T().slots);
+    botVals[k]=Math.floor(v*Math.min(1.5,Math.max(0.5,rich)));
+  }
+  return botVals[k];
+}
+function endGame(){S.phase="end";S.ends=null;S.auction=S.auction||null;log("Market closed")}
+function handle(pid,d){
+  if(!S||!d||(S.phase!=="play")) return;
+  const p=S.players.find(x=>x.id===pid); if(!p) return;
+  if(d.t==="pick") doPick(p,d.i|0);
+  else if(d.t==="bid") doBid(p,+d.a);
+}
+function tick(){
+  updateTimers();
+  if(!S||!isAuth()||(S.phase!=="play"&&S.phase!=="sold")) return;
+  const now=Date.now();
+  if(S.mode==="draft"){
+    const p=S.players[S.turn];
+    if(p.bot){ if(!botAt) botAt=now+700+Math.random()*1000; if(now>=botAt) doPick(p,botPick(p)); }
+    else if(S.ends&&now>=S.ends) doPick(p,botPick(p),true);
+    return;
+  }
+  if(S.phase==="sold"){ if(now>=S.ends){nextLot();commit()} return; }
+  if(now>=S.ends){resolveLot();commit();return}
+  const a=S.auction, late=S.ends-now<2000;
+  for(const b of shuffle(S.players.filter(x=>x.bot))){
+    if(a.lead===b.id) continue;
+    const cap=Math.min(botVal(b),maxBid(b));
+    if(a.bid+1<=cap&&Math.random()<(late?0.3:0.06)){ doBid(b,Math.min(cap,a.bid+(Math.random()<0.25?2:1))); break; }
+  }
+}
+function commit(){ if(role==="host") emitState(); render(); }
+
+/* ---------------- Multiplayer ---------------- */
+function emitState(){
+  if(!R||!S) return;
+  const {ends,...rest}=S;
+  R.emit("state",Object.assign(rest,{left:ends?Math.max(0,ends-Date.now()):null})).catch(()=>{});
+}
+function syncLobby(){
+  if(!R||!S||S.phase!=="lobby") return;
+  const humans=[{id:"host",name:myName||"Host",bot:false}];
+  R.peers().forEach(p=>{
+    if(p.sameTab) return; const pr=p.presence||{};
+    if(pr.code!==S.code||pr.host||!pr.name||humans.length>=MAXP) return;
+    if(!humans.some(h=>h.id===p.peer)) humans.push({id:p.peer,name:clip(pr.name),bot:false});
+  });
+  const nb=Math.max(0,Math.min(S.bots,MAXP-humans.length));
+  S.players=humans.concat(THEMES[S.theme].bots.slice(0,nb).map((n,i)=>({id:"bot"+i,name:n,bot:true})));
+}
+async function hostGame(){
+  if(!roomApi) return toast("Multiplayer is not available in this view.");
+  const L="ABCDEFGHJKMNPQRSTUVWXYZ"; let code=""; for(let i=0;i<4;i++) code+=L[Math.random()*L.length|0];
+  try{ R=await roomApi.join("hdd-"+code.toLowerCase()); }catch(e){ return toast("Couldn't open a room ("+(e&&e.code||"error")+")."); }
+  role="host"; myId="host"; hostPeer=null;
+  S={code,theme:setup.theme,mode:setup.mode,phase:"lobby",bots:0,players:[]};
+  R.presence({name:myName||"Host",code,host:true}).catch(()=>{});
+  R.on("act",m=>{ if(!m.sameTab) handle(m.peer,m.data); });
+  R.on("hello",()=>emitState());
+  R.onPeers(ch=>{ if(S&&S.phase==="lobby"){syncLobby();render()} if(ch.joined.length) emitState(); });
+  clearInterval(emitTimer); emitTimer=setInterval(emitState,2500);
+  syncLobby(); commit();
+}
+async function joinGame(){
+  const code=joinCode.toUpperCase().replace(/[^A-Z]/g,"");
+  if(code.length!==4) return toast("Enter the 4-letter room code.");
+  if(!roomApi) return toast("Multiplayer is not available in this view.");
+  try{ R=await roomApi.join("hdd-"+code.toLowerCase()); }catch(e){ return toast("Couldn't join ("+(e&&e.code||"error")+")."); }
+  role="guest"; S=null; hostPeer=null; myId=null; guestCode=code; render();
+  R.presence({name:myName||"Guest",code}).catch(()=>{});
+  R.on("state",m=>{
+    const d=m.data; if(!d||d.code!==code||!Array.isArray(d.players)) return;
+    if(hostPeer&&m.peer!==hostPeer) return;
+    hostPeer=m.peer; clearTimeout(joinTimeout); clearInterval(helloTimer);
+    S=d; guestDeadline=d.left!=null?Date.now()+d.left:null;
+    if(S.phase!=="play") selected=null;
+    render();
+  });
+  R.onPeers(ch=>{
+    const mine=ch.peers.find(p=>p.sameTab); if(mine&&myId!==mine.peer){myId=mine.peer;myPeer=mine.peer;render()}
+    if(hostPeer&&ch.left.some(p=>p.peer===hostPeer)){ toast("The host left the game."); goHome(); }
+  });
+  const hello=()=>R&&R.emit("hello",{}).catch(()=>{});
+  hello(); clearInterval(helloTimer); helloTimer=setInterval(hello,2000);
+  clearTimeout(joinTimeout); joinTimeout=setTimeout(()=>{ if(role==="guest"&&!S){ toast("No game found with code "+code+"."); goHome(); } },12000);
+}
+let guestCode="";
+function goHome(){
+  if(R){R.leave&&R.leave().catch(()=>{});R=null}
+  clearInterval(emitTimer); clearInterval(helloTimer); clearTimeout(joinTimeout);
+  S=null; role=null; myId=null; hostPeer=null; selected=null; render();
+}
+function act(d){
+  if(isAuth()) handle(myId,d);
+  else if(R) R.emit("act",d).catch(e=>toast(e&&e.code==="not_permitted"?"You need Contributor access to play. Ask the owner to share with you.":"Move didn't send, try again."));
+}
+function startSolo(){
+  role="solo"; myId="me"; R=null;
+  S={code:null,theme:setup.theme,mode:setup.mode,phase:"lobby"};
+  const th=THEMES[setup.theme];
+  newGame([{id:"me",name:myName||"You"}].concat(th.bots.slice(0,setup.bots).map((n,i)=>({id:"bot"+i,name:n,bot:true}))));
+  render();
+}
+
+/* ---------------- Rendering ---------------- */
+function portrait(it,th){
+  if(th.kind==="food") return `<div class="portrait food" style="--c1:${th.cats[it.t][1]};--c2:#ffffff">${it.e}</div>`;
+  if(th.kind==="anime"){ const s=th.series[it.e]; return `<div class="portrait" style="--c1:${s[1]};--c2:${s[2]}"><b>${esc(initials(it.n))}</b><span>${esc(s[0])}</span></div>`; }
+  return `<div class="portrait" style="--c1:${th.cats[it.t][1]};--c2:#15248f"><b>${esc(initials(it.n))}</b><span>${esc(th.cats[it.t][0])}</span></div>`;
+}
+function ava(it,th,cls){
+  if(th.kind==="anime") return `<span class="${cls||"ava"} init" style="--c:${th.series[it.e][1]}">${esc(initials(it.n))}</span>`;
+  const c=th.cats[it.t][1];
+  return th.kind==="football"
+    ? `<span class="${cls||"ava"} init" style="--c:${c}">${esc(initials(it.n))}</span>`
+    : `<span class="${cls||"ava"}" style="--c:${c}">${it.e}</span>`;
+}
+function timeLeft(){ if(!S) return null; const d=role==="guest"?guestDeadline:S.ends; return d?Math.max(0,d-Date.now()):null; }
+function updateTimers(){
+  const l=timeLeft();
+  document.querySelectorAll("[data-timer]").forEach(el=>{ el.textContent=l==null?"":Math.ceil(l/1000)+"s"; el.classList.toggle("urgent",l!=null&&l<3000); });
+  document.querySelectorAll("[data-bar]").forEach(el=>{ const tot=+el.dataset.bar; el.style.width=l==null?"100%":Math.min(100,l/tot*100)+"%"; el.classList.toggle("urgent",l!=null&&l<3000); });
+}
+function render(){
+  if(!S&&role==="guest") return renderWaiting();
+  if(!S) return renderHome();
+  if(S.phase==="lobby") return renderLobby();
+  if(S.phase==="end") return renderEnd();
+  return renderGame();
+}
+function header(small){
+  return `<header class="top"><div class="brand ${small?"sm":""}">Hundred Dollar Draft${small?"":"<small>$100 · build the best team · outbid your friends</small>"}</div>
+  ${S?`<div class="chips"><span class="chip gold">${esc(THEMES[S.theme].label)}</span><span class="chip">${S.mode==="draft"?"5-card pick":"Auction"}</span>${S.code?`<span class="chip">Room ${esc(S.code)}</span>`:""}<button class="btn ghost" data-a="home">Leave</button></div>`:""}</header>`;
+}
+function fan(tk,names){
+  const th=THEMES[tk];
+  return `<div class="fan">${names.map(n=>th.items.find(x=>x.n===n)).filter(Boolean).map(it=>portrait(it,th)).join("")}</div>`;
+}
+function renderHome(){
+  if(homeStep==="setup") return renderSetup();
+  app.innerHTML=header(false)+`
+  <div class="home">
+    <p class="hero-line">You get <b>$100</b>. Each turn you're dealt <b>5 random cards</b> at different prices. Buy one, pass the turn, get 5 new ones, and keep going until your money runs out. Best team wins.</p>
+    <div>
+      <div class="label">What are you into?</div>
+      <div class="cats">
+        <button class="cat" data-a="cat" data-v="anime"><h3>Anime</h3><p>Gojo, Goku, Luffy, Levi and 50 more. Squad of 6.</p>${fan("anime",["Goku","Gojo","Luffy","Naruto"])}</button>
+        <button class="cat" data-a="cat" data-v="football"><h3>Football</h3><p>Messi, Ronaldo, Neymar, Bale… Starting XI.</p>${fan("football",["Messi","Ronaldo","Neymar","Bale"])}</button>
+        <button class="cat" data-a="cat" data-v="pizza"><h3>Food</h3><p>Build a pizza or a burger. Six ingredients.</p>${fan("pizza",["Neapolitan dough","San Marzano","Burrata","Pepperoni"])}</button>
+      </div>
+    </div>
+    <ol class="how">
+      <li><b>Pick a category.</b> Anime, football or food.</li>
+      <li><b>5 cards each turn.</b> Every card has a different price. Buy one, then the next player gets a fresh 5.</li>
+      <li><b>Watch your budget.</b> You always need enough money left to fill your remaining slots.</li>
+      <li><b>Highest score wins.</b> Ratings plus bonuses for famous combos like Team 7, MSN or a proper Margherita.</li>
+    </ol>
+  </div>`;
+}
+function renderSetup(){
+  const multi=roomApi?`<button class="btn" data-a="host">Host a game</button>`:`<button class="btn" disabled>Host a game</button>`;
+  const th=THEMES[setup.theme], food=th.kind==="food";
+  app.innerHTML=header(false)+`
+  <div class="home">
+    <div class="row"><button class="back" data-a="back">← Change category</button></div>
+    <div class="row" style="gap:16px; align-items:flex-end">
+      <h2 style="margin:0; font:400 clamp(34px,7vw,56px)/1 var(--display); color:#fff; text-shadow:3px 3px 0 var(--ink)">${food?"Food":esc(th.label)}</h2>
+      ${food?`<div class="seg"><button class="${setup.theme==="pizza"?"on":""}" data-a="theme" data-v="pizza">🍕 Pizza</button><button class="${setup.theme==="burger"?"on":""}" data-a="theme" data-v="burger">🍔 Burger</button></div>`:""}
+    </div>
+    <p class="hero-line" style="margin:0">${esc(th.blurb)} $100 budget, ${th.slots} slots.</p>
+    <div>
+      <div class="label">Game style</div>
+      <div class="seg">
+        <button class="${setup.mode==="draft"?"on":""}" data-a="mode" data-v="draft">5-card pick<small>Get 5 random cards each turn, buy one</small></button>
+        <button class="${setup.mode==="auction"?"on":""}" data-a="mode" data-v="auction">Auction<small>One lot at a time, highest bid wins</small></button>
+      </div>
+    </div>
+    <div class="modes">
+      <div class="panel">
+        <h2>Solo</h2><p class="sub">Play against bots right now.</p>
+        <div class="field"><label class="label" for="nm">Your name</label><input type="text" id="nm" maxlength="16" placeholder="e.g. Atul" value="${esc(myName)}"></div>
+        <div class="row" style="margin-top:14px; justify-content:space-between">
+          <div class="stepper"><button data-a="bots-" aria-label="Fewer bots">−</button><b>${setup.bots}</b><button data-a="bots+" aria-label="More bots">+</button><span style="font-weight:700">bot${setup.bots>1?"s":""}</span></div>
+          <button class="btn big" data-a="solo">Play solo</button>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>With friends</h2><p class="sub">Up to ${MAXP} players. Your friends open this same page and join with your code.</p>
+        ${multi}
+        <div class="or">OR JOIN A GAME</div>
+        <div class="row"><input type="text" id="code" class="codein" maxlength="4" placeholder="CODE" value="${esc(joinCode)}" autocomplete="off"><button class="btn white" data-a="join" ${roomApi?"":"disabled"}>Join</button></div>
+        <p class="note">${roomApi?"Friends need access to this page to join.":roomReady?"Multiplayer only works when the page is opened on claude.ai. Solo works anywhere.":"Connecting…"}</p>
+      </div>
+    </div>
+  </div>`;
+}
+function renderWaiting(){
+  app.innerHTML=header(false)+`<div class="center-msg"><div class="code">${esc(guestCode)}</div><p style="font-size:18px">Looking for the host…</p><button class="btn white" data-a="home">Cancel</button></div>`;
+}
+function renderLobby(){
+  const host=role==="host", th=THEMES[S.theme];
+  const inGame=S.players.some(p=>p.id===myId);
+  app.innerHTML=header(true)+`
+  <div class="lobby">
+    <div class="panel">
+      <div class="label">Room code</div>
+      <div class="code">${esc(S.code)}</div>
+      <p class="sub" style="margin-top:14px">Friends open this page, choose <b>Join a game</b>, and type this code. They need Contributor access to the page.</p>
+      ${host?`
+        <div class="label" style="margin-top:8px">Market</div>
+        <div class="seg">${Object.entries(THEMES).map(([k,t])=>`<button class="${S.theme===k?"on":""}" data-a="ltheme" data-v="${k}">${esc(t.label)}</button>`).join("")}</div>
+        <div class="label" style="margin-top:14px">Style</div>
+        <div class="seg"><button class="${S.mode==="draft"?"on":""}" data-a="lmode" data-v="draft">5-card pick</button><button class="${S.mode==="auction"?"on":""}" data-a="lmode" data-v="auction">Auction</button></div>`
+      :`<div class="chips"><span class="chip gold">${esc(th.label)}</span><span class="chip">${S.mode==="draft"?"5-card pick":"Auction"}</span></div>`}
+    </div>
+    <div class="panel">
+      <div class="label">Players ${S.players.length}/${MAXP}</div>
+      <ul class="plist">${S.players.map(p=>`<li><span class="grow">${esc(p.name)}</span>${p.id==="host"?'<span class="tagsm host">HOST</span>':""}${p.bot?'<span class="tagsm bot">BOT</span>':""}${p.id===myId?'<span class="tagsm you">YOU</span>':""}</li>`).join("")}</ul>
+      ${host?`<div class="row" style="margin-top:14px; justify-content:space-between">
+        <div class="row"><button class="btn white" data-a="addbot" ${S.players.length>=MAXP?"disabled":""}>+ Bot</button><button class="btn white" data-a="rmbot" ${S.bots?"":"disabled"}>− Bot</button></div>
+        <button class="btn big" data-a="start" ${S.players.length<2?"disabled":""}>Start game</button></div>
+        ${S.players.length<2?'<p class="note">Waiting for a friend to join, or add a bot.</p>':""}`
+      :`<p class="note" style="margin-top:14px">${inGame?"You're in. Waiting for the host to start.":"The lobby is full, so you'll be watching this round."}</p>`}
+    </div>
+  </div>`;
+}
+function teamsHtml(){
+  const th=T(), a=S.auction;
+  return S.players.map((p,idx)=>{
+    const active=S.mode==="draft"?idx===S.turn:(a&&a.lead===p.id&&S.phase==="play");
+    const sc=score(S.theme,p.picks).total;
+    const slots=[]; for(let k=0;k<th.slots;k++){ const i=p.picks[k]; slots.push(i==null?'<span class="slot empty"></span>':ava(th.items[i],th,"slot")); }
+    return `<div class="team ${active?"active":""}"><div class="hd"><span class="grow">${esc(p.name)}</span>${p.bot?'<span class="tagsm bot">BOT</span>':""}${p.id===myId?'<span class="tagsm you">YOU</span>':""}<span class="money">$${p.money}</span></div>
+      <div class="st"><span>${p.picks.length}/${th.slots} picks</span><span>Score ${sc}</span></div><div class="slots">${slots.join("")}</div></div>`;
+  }).join("");
+}
+function stageHtml(){
+  const th=T(), mine=me();
+  if(S.mode==="draft"){
+    const p=S.players[S.turn], myTurn=mine&&p.id===myId;
+    const tot=S.turnMs||1;
+    let conf="";
+    if(myTurn&&selected!=null&&(S.hand||[]).includes(selected)){
+      const it=item(selected);
+      conf=`<div class="confirm">${ava(it,th)}<b style="font-size:17px">${esc(it.n)}</b><span class="meta">${it.r} ${th.rate}</span><span style="flex:1"></span><button class="btn white" data-a="unsel">Cancel</button><button class="btn big" data-a="confirm">Buy for $${it.p}</button></div>`;
+    }
+    const cards=(S.hand||[]).map(i=>{
+      const it=item(i), ok=myTurn&&canAfford(mine,i);
+      const sub=th.kind==="anime"?th.cats[it.t][0]:th.kind==="football"?it.t:th.cats[it.t][0];
+      return `<button class="hcard ${selected===i&&myTurn?"sel":""}" data-a="sel" data-v="${i}" ${ok?"":"disabled"} aria-label="${esc(it.n)}, $${it.p}">
+        <span class="price">$${it.p}</span>${portrait(it,th)}<span class="nm">${esc(it.n)}</span>
+        <span class="meta">${esc(sub)} · ${it.r} ${th.rate}</span>${myTurn&&!ok?'<span class="cant">Over your budget</span>':""}</button>`;
+    }).join("");
+    const who=myTurn?"Your turn. Buy one of these 5.":esc(p.name)+(p.bot?" is thinking…":" is choosing…");
+    return `<div class="panel"><div class="turn"><div><div class="label">Pick ${Math.min(S.round,th.slots)} of ${th.slots} · ${esc(p.name)} has $${p.money}</div>
+      <h2>${who}</h2></div>
+      ${S.ends?`<div class="timer" data-timer></div>`:""}</div>
+      ${S.ends?`<div class="bar"><i data-bar="${tot}"></i></div>`:""}
+      <div class="hand">${cards}</div>${conf}</div>`;
+  }
+  if(S.phase==="sold"&&S.last){
+    const it=item(S.last.i);
+    return `<div class="panel"><div class="lot">${ava(it,th)}<div><div class="label">Lot ${S.lot}</div><h2>${esc(it.n)}</h2></div>
+      <div class="bidnow">${S.last.who?`<span class="sold">SOLD $${S.last.price}</span><div class="who" style="margin-top:10px">to ${esc(S.last.who)}</div>`:`<span class="sold none">NO BIDS</span>`}</div></div></div>`;
+  }
+  const a=S.auction, it=item(a.item), lead=S.players.find(p=>p.id===a.lead);
+  const mb=mine?maxBid(mine):0, leading=mine&&a.lead===myId;
+  const incs=[1,2,5,10].map(n=>{const v=a.bid+n; return `<button class="btn ${n===1?"":"white"}" data-a="bid" data-v="${v}" ${!mine||leading||v>mb?"disabled":""}>$${v}</button>`}).join("");
+  return `<div class="panel"><div class="lot">${ava(it,th)}<div><div class="label">Lot ${S.lot} · ${esc(th.cats[it.t][0])}</div><h2>${esc(it.n)}</h2>
+    <div class="meta">${it.r} ${th.rate} · list price $${it.p}</div></div>
+    <div class="bidnow"><div class="amt">$${a.bid}</div><div class="who">${lead?(lead.id===myId?"You're winning":esc(lead.name)+" leads"):"Opening bid $1"}</div></div></div>
+    <div class="bar"><i data-bar="${LOT_MS}"></i></div>
+    <div class="bids">${mine?incs+`<span style="flex:1"></span><span class="meta" style="font-weight:700">Your max bid $${Math.max(0,mb)}</span>`:'<span class="meta">You are watching this game.</span>'}<span class="timer" data-timer></span></div></div>`;
+}
+function marketHtml(){
+  const th=T(), mine=me(), myTurn=S.mode==="draft"&&mine&&S.players[S.turn].id===myId;
+  const cats=Object.keys(th.cats);
+  const list=S.pool.map((i,pos)=>({i,pos})).filter(x=>filter==="all"||item(x.i).t===filter);
+  const cards=list.map(({i,pos})=>{
+    const it=item(i), ok=myTurn&&canAfford(mine,i);
+    const inner=`<span class="price">$${it.p}</span>${ava(it,th)}<span class="nm">${esc(it.n)}</span><span class="meta"><span class="dot" style="--c:${th.cats[it.t][1]}"></span>${esc(th.kind==="football"?it.t:th.cats[it.t][0])} · ${it.r} ${th.rate}</span>${S.mode==="auction"&&pos<3?`<span class="upnext">${pos===0?"UP NEXT":"IN "+(pos+1)}</span>`:""}`;
+    return S.mode==="draft"
+      ? `<button class="card ${selected===i?"sel":""}" data-a="sel" data-v="${i}" ${ok?"":"disabled"} aria-label="${esc(it.n)}, $${it.p}">${inner}</button>`
+      : `<div class="card ${pos===0?"next":""}">${inner}</div>`;
+  }).join("");
+  return `<div class="sec-head"><div class="label" style="margin:0">${S.mode==="draft"?"Market":"Coming up"} · ${S.pool.length} left</div>
+    <div class="filters"><button class="${filter==="all"?"on":""}" data-a="filter" data-v="all">All</button>${cats.map(c=>`<button class="${filter===c?"on":""}" data-a="filter" data-v="${c}">${esc(th.cats[c][0])}</button>`).join("")}</div></div>
+    <div class="grid">${cards||'<p style="color:var(--soft)">Nothing left in this category.</p>'}</div>`;
+}
+function combosHtml(){
+  const th=T(), mine=me(); const owned=new Set(mine?mine.picks.map(i=>th.items[i].n):[]);
+  return `<div class="combos"><div class="label">Combo bonuses</div><ul class="combo-list">${th.combos.map(([l,need,v])=>`<li><span><b>${esc(l)}</b> · ${need.map(n=>owned.has(n)?`<u>${esc(n)}</u>`:esc(n)).join(" + ")}</span><span class="pts ${v<0?"neg":""}">${v>0?"+":""}${v}</span></li>`).join("")}</ul></div>`;
+}
+function renderGame(){
+  app.innerHTML=header(true)+`<div class="stage">${stageHtml()}</div>
+  <div class="layout"><section>${S.mode==="auction"?marketHtml():`<div class="label">${S.pool.length} cards left in the deck</div>`}${combosHtml()}<div class="log">${(S.log||[]).map(l=>`<div>${esc(l)}</div>`).join("")}</div></section>
+  <aside class="teams">${teamsHtml()}</aside></div>`;
+  updateTimers();
+}
+function renderEnd(){
+  const th=T();
+  const rows=S.players.map(p=>({p,s:score(S.theme,p.picks)})).sort((a,b)=>b.s.total-a.s.total||b.p.money-a.p.money);
+  const winner=rows[0];
+  const canRestart=isAuth();
+  app.innerHTML=header(true)+`
+  <div class="panel" style="margin-bottom:18px; text-align:center">
+    <div class="label">Final whistle</div>
+    <h2 style="font-size:clamp(28px,6vw,48px)">${winner.p.id===myId?"You win!":esc(winner.p.name)+" wins"}</h2>
+    <p class="sub" style="margin:6px 0 14px">${winner.s.total} points with $${winner.p.money} left over.</p>
+    <div class="row" style="justify-content:center">${canRestart?`<button class="btn big" data-a="again">Play again</button>`:'<span class="note">Waiting for the host to start another round.</span>'}<button class="btn white" data-a="home">Home</button></div>
+  </div>
+  <div class="podium">${rows.map((r,k)=>`
+    <div class="panel result ${k===0?"win":""}"><div class="rank">${k+1}</div>
+      <div><div class="row"><h2 style="margin:0">${esc(r.p.name)}</h2>${r.p.bot?'<span class="tagsm bot">BOT</span>':""}${r.p.id===myId?'<span class="tagsm you">YOU</span>':""}</div>
+        <div class="picks">${r.p.picks.map(i=>{const it=th.items[i];return `<span class="pk">${th.kind==="food"?it.e:""}${esc(it.n)} <span>${it.r}</span></span>`}).join("")||'<span class="note">No picks</span>'}</div>
+        <div class="breakdown"><div><span>Ratings (${r.p.picks.length} picks)</span><span class="v">${r.s.base}</span></div>
+          ${r.s.lines.map(x=>`<div><span>${x.combo?"Combo: ":""}${esc(x.l)}</span><span class="v ${x.v<0?"neg":"pos"}">${x.v>0?"+":""}${x.v}</span></div>`).join("")}
+          <div><span>Money left</span><span class="v">$${r.p.money}</span></div></div>
+      </div>
+      <div class="total">${r.s.total}<small>points</small></div></div>`).join("")}</div>`;
+}
+
+/* ---------------- Events ---------------- */
+let toastT=0;
+function toast(m){const t=document.getElementById("toast");t.textContent=m;t.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>t.hidden=true,3500)}
+app.addEventListener("input",e=>{
+  if(e.target.id==="nm"){myName=clip(e.target.value);save("hdd-name",myName)}
+  if(e.target.id==="code"){joinCode=e.target.value.toUpperCase().replace(/[^A-Z]/g,"").slice(0,4);e.target.value=joinCode}
+});
+app.addEventListener("keydown",e=>{ if(e.key==="Enter"&&e.target.id==="code") joinGame(); });
+app.addEventListener("click",e=>{
+  const b=e.target.closest("[data-a]"); if(!b||b.disabled) return;
+  const a=b.dataset.a, v=b.dataset.v;
+  switch(a){
+    case "cat": setup.theme=v; homeStep="setup"; render(); window.scrollTo(0,0); break;
+    case "back": homeStep="pick"; render(); break;
+    case "theme": setup.theme=v; render(); break;
+    case "mode": setup.mode=v; render(); break;
+    case "bots-": setup.bots=Math.max(1,setup.bots-1); render(); break;
+    case "bots+": setup.bots=Math.min(MAXP-1,setup.bots+1); render(); break;
+    case "solo": startSolo(); break;
+    case "host": hostGame(); break;
+    case "join": joinGame(); break;
+    case "home": goHome(); break;
+    case "ltheme": if(role==="host"){S.theme=v;syncLobby();commit()} break;
+    case "lmode": if(role==="host"){S.mode=v;commit()} break;
+    case "addbot": if(role==="host"){S.bots++;syncLobby();commit()} break;
+    case "rmbot": if(role==="host"){S.bots=Math.max(0,S.bots-1);syncLobby();commit()} break;
+    case "start": if(role==="host"){syncLobby(); if(S.players.length>=2){newGame(S.players);commit()}} break;
+    case "sel": selected=+v; render(); break;
+    case "unsel": selected=null; render(); break;
+    case "confirm": if(selected!=null){act({t:"pick",i:selected}); if(role==="guest"){selected=null;render()}} break;
+    case "bid": act({t:"bid",a:+v}); break;
+    case "filter": filter=v; render(); break;
+    case "again":
+      if(role==="solo") startSolo();
+      else if(role==="host"){ const bots=S.players.filter(p=>p.bot).length; S={code:S.code,theme:S.theme,mode:S.mode,phase:"lobby",bots,players:[]}; syncLobby(); commit(); }
+      break;
+  }
+});
+
+setInterval(tick,200);
+render();
+const use=window.claude&&window.claude.use?window.claude.use("room"):Promise.resolve(null);
+use.then(r=>{roomApi=r;roomReady=true;if(!S&&!role)render()}).catch(()=>{roomReady=true;if(!S&&!role)render()});
+})();
+</script>
+</body>
+</html>

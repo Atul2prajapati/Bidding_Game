@@ -1,0 +1,17 @@
+{
+  "name": "Hundred Dollar Draft",
+  "short_name": "$100 Draft",
+  "description": "Pick Anime, Pokémon, Superheroes, Football, Cricket or Food. Five random cards each turn, $100 to build the best team.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0c10",
+  "theme_color": "#0e9f5f",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
