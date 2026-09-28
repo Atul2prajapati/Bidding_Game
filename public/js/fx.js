@@ -138,3 +138,60 @@ export function countUp(root) {
     })(t0);
   });
 }
+
+/* ---------- The pick: chosen card lifts and glows, the rest drop away, it flies into the team ---------- */
+// `handHtml` / `handRect`: the hand as it looked just before the pick (the page has already re-rendered).
+export function pickAnimation({ handHtml, handRect, chosen, target }) {
+  if (reducedMotion() || !handHtml || !handRect) { target?.classList.add("pop"); return; }
+  const stage = document.createElement("div");
+  stage.className = "pick-stage";
+  Object.assign(stage.style, { left: handRect.left + "px", top: handRect.top + "px", width: handRect.width + "px", height: handRect.height + "px" });
+  stage.innerHTML = handHtml;
+  document.body.appendChild(stage);
+  const hand = stage.firstElementChild;
+  hand.classList.remove("deal", "late");
+  const cards = [...hand.querySelectorAll(".hcard")];
+  const pick = cards.find(c => c.dataset.v === String(chosen));
+  cards.forEach((c, k) => { if (c !== pick) { c.style.animationDelay = k * 30 + "ms"; c.classList.add("pick-away"); } });
+  if (!pick) { setTimeout(() => stage.remove(), 500); return; }
+  pick.classList.add("pick-chosen");
+
+  // After the lift, fly the chosen card to the player's team.
+  setTimeout(() => {
+    const from = pick.getBoundingClientRect(), to = target?.getBoundingClientRect();
+    if (!to || !to.width) { pick.classList.add("pick-away"); setTimeout(() => stage.remove(), 450); return; }
+    const dx = to.left + to.width / 2 - (from.left + from.width / 2);
+    const dy = to.top + to.height / 2 - (from.top + from.height / 2);
+    const s = Math.max(0.12, to.width / from.width);
+    pick.style.transition = "transform .6s cubic-bezier(.55,-0.15,.25,1), opacity .6s ease-in";
+    pick.style.transform = `translate(${dx}px, ${dy}px) scale(${s}) rotate(${dx > 0 ? 14 : -14}deg)`;
+    pick.style.opacity = "0.35";
+    setTimeout(() => {
+      stage.remove();
+      target.classList.remove("pop"); void target.offsetWidth; target.classList.add("pop");
+      burst(to.left + to.width / 2, to.top + to.height / 2);
+    }, 600);
+  }, 360);
+}
+
+// Little sparkle burst where the card lands.
+export function burst(x, y) {
+  if (reducedMotion()) return;
+  const css = getComputedStyle(document.documentElement);
+  const colors = [css.getPropertyValue("--accent"), css.getPropertyValue("--gold"), "#ffffff"].map(s => s.trim());
+  const box = document.createElement("div");
+  box.className = "burst";
+  Object.assign(box.style, { left: x + "px", top: y + "px" });
+  for (let k = 0; k < 14; k++) {
+    const d = document.createElement("i");
+    const a = (k / 14) * Math.PI * 2, r = 26 + Math.random() * 22;
+    d.style.setProperty("--tx", `${Math.cos(a) * r}px`);
+    d.style.setProperty("--ty", `${Math.sin(a) * r}px`);
+    d.style.background = colors[k % colors.length];
+    box.appendChild(d);
+  }
+  const ring = document.createElement("b");
+  box.appendChild(ring);
+  document.body.appendChild(box);
+  setTimeout(() => box.remove(), 700);
+}

@@ -16,11 +16,14 @@ export const ctx = {
   filter: "all",
   net: null,          // WebSocket connection when online
   photos: {},         // card photos from /images/manifest.json, by market kind then card name
-  fx: { deal: false, newPick: false },  // one-shot animation flags for the next render
+  fx: { deal: false, dealLate: false, dealtAt: 0, newPick: false },  // animation flags for the next render
   mobileTab: "play"   // phone layout: "play" | "teams" | "picks"
 };
 
 export const me = () => ctx.S?.players?.find(p => p.id === ctx.myId) || null;
 export const isHost = () => ctx.role === "solo" || (ctx.S && ctx.S.hostId === ctx.myId);
-export const modeLabel = m => (m === "draft" ? "5-card pick" : "Auction");
+import { THEMES } from "/shared/themes.js";
+// "Pick your XI" for 11-a-side markets, "Pick your team" elsewhere; the hand is always 5 cards.
+export const modeLabel = (m, themeKey) => (m === "draft" ? (THEMES[themeKey]?.slots === 11 ? "Pick your XI" : "Pick your team") : "Auction");
+export const modeDetail = themeKey => `5 cards each turn · ${THEMES[themeKey]?.slots ?? 6} players`;
 export const clip = s => String(s || "").replace(/[\u0000-\u001f]/g, "").trim().slice(0, 16);

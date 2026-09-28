@@ -5,7 +5,7 @@ import { MAXP, newGame, handle, tick } from "/shared/engine.js";
 import { ctx, save, clip } from "./state.js";
 import { view, ranking } from "./views.js";
 import { connect } from "./net.js";
-import { play, setSound, isSoundOn, enableTilt, fly, confetti, countUp } from "./fx.js";
+import { play, setSound, isSoundOn, enableTilt, fly, confetti, countUp, pickAnimation } from "./fx.js";
 
 const app = document.getElementById("app");
 const toastEl = document.getElementById("toast");
@@ -46,12 +46,18 @@ function render() {
   // Someone just bought a card: grab it from the screen before it disappears, so it can fly to their team.
   const newPick = !!(now && was && now.pickNo > was.pickNo && S.lastPick);
   ctx.fx.newPick = newPick;
-  let flight = null;
-  if (newPick) {
-    const i = S.lastPick.i;
-    const el = app.querySelector(`.hcard[data-v="${i}"] .fut, .hcard[data-v="${i}"] .portrait`) || app.querySelector(".lot .fut, .lot .portrait");
+  let flight = null, pickShow = null;
+  if (newPick && S.mode === "draft") {
+    // 5-card pick: remember the whole hand as it looked, to play the pick animation over the new screen.
+    const hand = app.querySelector(".hand");
+    if (hand) pickShow = { handHtml: hand.outerHTML, handRect: hand.getBoundingClientRect(), chosen: S.lastPick.i, pid: S.lastPick.pid };
+  } else if (newPick) {
+    const el = app.querySelector(".lot .fut, .lot .portrait");
     if (el) flight = { rect: el.getBoundingClientRect(), html: el.outerHTML, pid: S.lastPick.pid };
   }
+  // The next hand deals in after the pick animation, not on top of it.
+  ctx.fx.dealLate = !!(pickShow && ctx.fx.deal);
+  if (ctx.fx.deal) ctx.fx.dealtAt = Date.now() + (ctx.fx.dealLate ? 650 : 0);
 
   app.innerHTML = view();
   updateTimers();
@@ -71,12 +77,9 @@ function render() {
     }
   } else if (fresh && ctx.fx.deal) play("deal");
 
-  // The card that was just bought flies into that player's team.
-  if (flight) {
-    const team = [...app.querySelectorAll(".team")].find(t => t.dataset.pid === flight.pid);
-    const target = team?.querySelector(".slot.new") || team?.querySelector(".slot:not(.empty):last-of-type");
-    if (target) fly(flight.rect, flight.html, target);
-  }
+  // The card that was just bought goes to that player: their team slot if it's on screen, else their avatar.
+  if (pickShow) pickAnimation({ ...pickShow, target: pickTarget(pickShow.pid) });
+  if (flight) { const target = pickTarget(flight.pid); if (target) fly(flight.rect, flight.html, target); }
 
   if (endedNow) {
     countUp(app);
@@ -189,10 +192,13 @@ app.addEventListener("click", e => {
     case "sel": ctx.selected = Number(v); play("select"); buzz(8); render(); break;
     case "tab": ctx.mobileTab = v; render(); scrollTo({ top: 0 }); break;
     case "unsel": ctx.selected = null; render(); break;
-    case "confirm": if (ctx.selected != null) {
-      const i = ctx.selected;
-      ctx.selected = null; act({ t: "pick", i }); render();
-    } break;
+    case "buy": {
+      // One tap buys. Ignore taps in the first moment after a new hand appears, so a double tap
+      // (e.g. two turns in a row at the end of a snake round) can't buy a card you never saw.
+      if (Date.now() - ctx.fx.dealtAt < 550) break;
+      act({ t: "pick", i: Number(v) });
+      break;
+    }
     case "sound": setSound(!isSoundOn()); render(); break;
     case "themeToggle": toggleTheme(); break;
     case "bid": act({ t: "bid", a: Number(v) }); break;
@@ -200,6 +206,14 @@ app.addEventListener("click", e => {
     case "again": ctx.role === "solo" ? startSolo() : hostSend({ type: "again" }); break;
   }
 });
+
+// Where a player's new card should land: the first visible spot among their new team slot or their avatar.
+function pickTarget(pid) {
+  const visible = el => el && el.getBoundingClientRect().width > 0;
+  const same = sel => [...app.querySelectorAll(sel)].filter(el => el.closest("[data-pid]")?.dataset.pid === pid);
+  const spots = [...same(".myteam .slot.new"), ...same(".team .slot.new"), ...same(".seat .avatar"), ...same(".team .avatar")];
+  return spots.find(visible) || null;
+}
 
 /* ---------- Haptics (Android; iPhones ignore web vibration) ---------- */
 function buzz(pattern) { try { navigator.vibrate?.(pattern); } catch { /* not supported */ } }

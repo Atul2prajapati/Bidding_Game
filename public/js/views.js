@@ -4,7 +4,7 @@
 import { THEMES, BUDGET, score, initials } from "/shared/themes.js";
 import { MAXP, LOT_MS, theme, item, canAfford, maxBid, minNextBid, priceOf, fairPrice, slotsLeft } from "/shared/engine.js";
 import { onlineAvailable } from "./net.js";
-import { ctx, me, isHost, modeLabel } from "./state.js";
+import { ctx, me, isHost, modeLabel, modeDetail } from "./state.js";
 import { isSoundOn } from "./fx.js";
 
 export const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
@@ -83,7 +83,7 @@ function clock(total) {
 
 function header() {
   const S = ctx.S;
-  const chips = S && S.phase ? `<div class="chips"><span class="chip accent">${esc(THEMES[S.theme].label)}</span><span class="chip">${modeLabel(S.mode)}</span>${S.code ? `<span class="chip">Room <span class="num">${esc(S.code)}</span></span>` : ""}</div>` : "";
+  const chips = S && S.phase ? `<div class="chips"><span class="chip accent">${esc(THEMES[S.theme].label)}</span><span class="chip">${modeLabel(S.mode, S.theme)}</span>${S.code ? `<span class="chip">Room <span class="num">${esc(S.code)}</span></span>` : ""}</div>` : "";
   return `<header class="top">
     <div class="brand"><span class="logo">$</span><span class="word">Hundred Dollar Draft</span></div>
     <div class="top-right">${chips}
@@ -148,7 +148,7 @@ function setupView() {
     <div class="row" style="gap:16px; align-items:flex-start">
       ${food ? `<div><div class="label">Dish</div><div class="seg"><button class="${setup.theme === "pizza" ? "on" : ""}" data-a="theme" data-v="pizza">🍕 Pizza</button><button class="${setup.theme === "burger" ? "on" : ""}" data-a="theme" data-v="burger">🍔 Burger</button></div></div>` : ""}
       <div><div class="label">Game style</div><div class="seg">
-        <button class="${setup.mode === "draft" ? "on" : ""}" data-a="mode" data-v="draft">5-card pick<small>Five random cards each turn</small></button>
+        <button class="${setup.mode === "draft" ? "on" : ""}" data-a="mode" data-v="draft">${modeLabel("draft", setup.theme)}<small>${modeDetail(setup.theme)}</small></button>
         <button class="${setup.mode === "auction" ? "on" : ""}" data-a="mode" data-v="auction">Auction<small>Bid live, highest wins</small></button>
       </div></div>
     </div>
@@ -192,8 +192,8 @@ function lobbyView() {
         <div class="label" style="margin-top:18px">Category</div>
         <div class="seg">${Object.entries(THEMES).map(([k, t]) => `<button class="${S.theme === k ? "on" : ""}" data-a="ltheme" data-v="${k}">${esc(t.label)}</button>`).join("")}</div>
         <div class="label" style="margin-top:16px">Style</div>
-        <div class="seg"><button class="${S.mode === "draft" ? "on" : ""}" data-a="lmode" data-v="draft">5-card pick</button><button class="${S.mode === "auction" ? "on" : ""}" data-a="lmode" data-v="auction">Auction</button></div>`
-      : `<div class="chips"><span class="chip accent">${esc(th.label)}</span><span class="chip">${modeLabel(S.mode)}</span></div>`}
+        <div class="seg"><button class="${S.mode === "draft" ? "on" : ""}" data-a="lmode" data-v="draft">${modeLabel("draft", S.theme)}</button><button class="${S.mode === "auction" ? "on" : ""}" data-a="lmode" data-v="auction">Auction</button></div>`
+      : `<div class="chips"><span class="chip accent">${esc(th.label)}</span><span class="chip">${modeLabel(S.mode, S.theme)}</span></div>`}
     </div>
     <div class="panel">
       <div class="label">Players · ${S.players.length}/${MAXP}</div>
@@ -238,7 +238,7 @@ function orderStrip() {
   const S = ctx.S, th = theme(S), arrow = S.dir === -1 ? "‹" : "›";
   return `<div class="order" role="list" aria-label="Turn order">${S.players.map((p, i) => {
     const full = p.picks.length >= th.slots;
-    return `<div class="seat ${i === S.turn ? "now" : ""} ${full ? "done" : ""} ${p.id === ctx.myId ? "me" : ""}" role="listitem">${avatar(p, i)}
+    return `<div class="seat ${i === S.turn ? "now" : ""} ${full ? "done" : ""} ${p.id === ctx.myId ? "me" : ""}" data-pid="${esc(p.id)}" role="listitem">${avatar(p, i)}
       <span class="seat-txt"><b>${p.id === ctx.myId ? "You" : esc(p.name)}</b><small>$${p.money} · ${p.picks.length}/${th.slots}</small></span></div>`;
   }).join(`<span class="sep">${arrow}</span>`)}</div>`;
 }
@@ -267,27 +267,20 @@ function feedHtml() {
 
 function draftStage() {
   const S = ctx.S, th = theme(S), mine = me(), p = S.players[S.turn], myTurn = mine && p.id === ctx.myId;
-  let conf = "";
-  if (myTurn && ctx.selected != null && S.hand.includes(ctx.selected)) {
-    const it = item(S, ctx.selected);
-    conf = `<div class="confirm">${ava(it, th)}<div class="grow"><b>${esc(it.n)}</b><span class="meta">${esc(catLabel(it, th))} · ${it.r} ${th.rate} · you'll have $${mine.money - it.p} left</span></div>
-      <button class="btn white" data-a="unsel">Cancel</button><button class="btn big" data-a="confirm">Buy for $${it.p}</button></div>
-      <p class="tap-hint">Tap the card again or press Buy</p>`;
-  }
   const cards = S.hand.map(i => {
     const it = item(S, i), ok = myTurn && canAfford(S, mine, i);
-    return `<button class="hcard ${rarity(it, th)} ${ctx.selected === i && myTurn ? "sel" : ""}" data-a="${ctx.selected === i && myTurn ? "confirm" : "sel"}" data-v="${i}" ${ok ? "" : "disabled"} aria-label="${esc(it.n)}, $${it.p}">
+    return `<button class="hcard ${rarity(it, th)}" data-a="buy" data-v="${i}" ${ok ? "" : "disabled"} aria-label="Buy ${esc(it.n)} for $${it.p}">
       <span class="shine"></span><span class="price">$${it.p}</span>${bigCard(it, th)}<span class="nm">${esc(it.n)}</span>
       <span class="meta">${th.card ? tierName(it, th) + " · " + esc(it.t) : esc(catLabel(it, th)) + " · " + it.r + " " + th.rate}</span>${myTurn && !ok ? '<span class="cant">Over your budget</span>' : ""}</button>`;
   }).join("");
   const who = myTurn
-    ? `<h2 class="who-now mine">Your turn — pick one card</h2>`
+    ? `<h2 class="who-now mine">Your turn — tap a card to buy it</h2>`
     : `<h2 class="who-now">${avatar(p, S.turn)}<span><b>${esc(p.name)}</b> is picking<span class="dots"><i></i><i></i><i></i></span></span></h2>`;
   return `<div class="panel stage-panel ${myTurn ? "my-turn" : ""}">${orderStrip()}
     <div class="turn"><div><div class="label">Round ${Math.min(S.round, th.slots)} of ${th.slots} · ${myTurn ? "you have" : esc(p.name) + " has"} <span class="num">$${p.money}</span> to spend</div>${who}</div>
     ${S.ends ? clock(S.turnMs || 1) : ""}</div>
     ${lastPickBanner()}
-    <div class="hand ${ctx.fx.deal ? "deal" : ""} ${myTurn ? "" : "waiting"}">${cards}</div>${conf}</div>`;
+    <div class="hand ${ctx.fx.deal ? "deal" : ""} ${ctx.fx.dealLate ? "late" : ""} ${myTurn ? "" : "waiting"}">${cards}</div></div>`;
 }
 
 // Helps players avoid overpaying: is this price good for the card's rating, and how much can you spend per card?

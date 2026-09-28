@@ -55,7 +55,9 @@ run), and the website on Vercel or on Render itself. Files involved: `render.yam
 
 The game is built phone-first:
 
-- All 5 cards fit on screen (3 on top, 2 below), with no sliding. Tap a card to select it, then tap it again or press **Buy**.
+- All 5 cards fit on screen (3 on top, 2 below), with no sliding. **One tap buys a card.** Taps in the first moment
+  after a new hand appears are ignored, so a double tap can't buy a card you never saw.
+- When anyone picks, the chosen card lifts and glows, the others drop away, and it flies into that player's team.
 - A bottom tab bar switches between **Play**, **Teams** and **Picks**. It jumps back to Play when your turn starts.
 - Your own team shows under your cards. Phones vibrate on your turn and on a purchase (Android; iPhones don't allow this for websites).
 
