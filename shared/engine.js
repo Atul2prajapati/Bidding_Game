@@ -28,7 +28,10 @@ export const priceOf = (S, i) => S.reprice?.[i] ?? item(S, i).p;
 // Money you must keep back to fill your other empty slots with the cheapest cards still in the deck.
 function reserve(S, need, exclude) {
   if (need <= 0) return 0;
-  const prices = S.pool.filter(i => i !== exclude).map(i => (S.mode === "auction" ? priceOf(S, i) : item(S, i).p)).sort((a, b) => a - b);
+  // Auction: count the whole remaining deck (the list and the bench) at full price. Cheap second-chance
+  // cards may be bought by someone else, so relying on them could leave a team unable to fill up.
+  const cards = S.mode === "auction" ? S.pool.concat(S._bench || []) : S.pool;
+  const prices = cards.filter(i => i !== exclude).map(i => item(S, i).p).sort((a, b) => a - b);
   let sum = 0;
   for (let k = 0; k < need; k++) sum += prices[k] ?? minPrice(S);
   return sum;
@@ -194,7 +197,17 @@ function nextLot(S) {
   // Not enough cards left to fill every team? Bring fresh ones in from the bench, at full price.
   const open = S.players.reduce((n, p) => n + Math.max(0, slotsLeft(S, p)), 0);
   while (S._bench?.length && S.pool.length < open) S.pool.push(S._bench.shift());
-  while (S.pool.length && !S.players.some(p => maxBid(S, p) >= priceOf(S, S.pool[0]))) S.pool.shift();
+  // Nobody can afford the next card? If someone still has empty slots, sell it at a price they can pay
+  // (clearance) rather than skipping it and leaving their team short.
+  while (S.pool.length && !S.players.some(p => maxBid(S, p) >= priceOf(S, S.pool[0]))) {
+    const needy = S.players.filter(p => slotsLeft(S, p) > 0 && p.money > 0);
+    if (!needy.length) { S.pool.shift(); continue; }
+    const affordable = Math.max(1, Math.min(...needy.map(p => Math.floor(p.money / slotsLeft(S, p)))));
+    if (priceOf(S, S.pool[0]) <= affordable) break;
+    S.reprice[S.pool[0]] = affordable;
+    if (S.players.some(p => maxBid(S, p) >= affordable)) break;
+    S.pool.shift();
+  }
   if (!S.pool.length) return endGame(S);
   S.lot++;
   const i = S.pool.shift();
@@ -222,7 +235,10 @@ function resolveLot(S) {
     // doesn't beat bidding (a 60% discount made patient players win most games).
     S.returns = S.returns || {};
     const n = (S.returns[a.item] = (S.returns[a.item] || 0) + 1);
-    const lower = n <= 2 ? Math.max(1, Math.min(a.start - 1, Math.round(it.p * (n === 1 ? 0.8 : 0.65)))) : a.start;
+    let lower = n <= 2 ? Math.max(1, Math.min(a.start - 1, Math.round(it.p * (n === 1 ? 0.8 : 0.65)))) : a.start;
+    // Last call: if dropping this card would leave teams unable to fill up, bring it back once more at $1.
+    const open = S.players.reduce((c, p) => c + Math.max(0, slotsLeft(S, p)), 0);
+    if (n > 2 && a.start > 1 && open > S.pool.length + (S._bench?.length || 0)) lower = 1;
     if (lower < a.start) { S.reprice[a.item] = lower; S.pool.push(a.item); log(S, `No bids on ${it.n}: back later at $${lower}`); }
     else log(S, `No bids on ${it.n}`);
   }
