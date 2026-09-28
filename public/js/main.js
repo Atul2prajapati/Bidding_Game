@@ -5,7 +5,7 @@ import { MAXP, newGame, handle, tick } from "/shared/engine.js";
 import { ctx, save, clip } from "./state.js";
 import { view, ranking } from "./views.js";
 import { connect } from "./net.js";
-import { play, setSound, isSoundOn, enableTilt, fly, confetti, countUp, pickAnimation, PICK_MS } from "./fx.js";
+import { play, setSound, isSoundOn, enableTilt, fly, confetti, countUp, pickAnimation, PICK_MS, warmPhotos } from "./fx.js";
 
 const app = document.getElementById("app");
 const toastEl = document.getElementById("toast");
@@ -38,6 +38,11 @@ function render() {
   const fresh = now && (!was || was.phase === "lobby");
   ctx.fx.deal = !!(now && S.mode === "draft" && S.phase === "play" && (!was || was.hand !== now.hand));
   const endedNow = now && now.phase === "end" && (!was || was.phase !== "end");
+  // A game just started: load this category's photos in the background so every hand shows instantly.
+  if (now && now.phase !== "lobby" && (!was || was.phase === "lobby")) {
+    const kind = THEMES[S.theme]?.kind, list = ctx.photos[kind];
+    if (list) warmPhotos(Object.values(list).map(p => p.file));
+  }
   // Your turn just started: bring the cards to the front on phones and give a little buzz (Android).
   const turnStarted = now && S.mode === "draft" && S.phase === "play" && now.turn === ctx.myId && (!was || was.turn !== ctx.myId);
   if (turnStarted) { ctx.mobileTab = "play"; buzz(30); }
@@ -47,12 +52,14 @@ function render() {
   const newPick = !!(now && was && now.pickNo > was.pickNo && S.lastPick);
   ctx.fx.newPick = newPick;
   let flight = null, pickShow = null;
-  if (newPick && S.mode === "draft") {
-    // 5-card pick: remember the whole hand as it looked, to play the pick animation over the new screen.
+  if (newPick && S.mode === "draft" && S.lastPick.pid === ctx.myId) {
+    // Your own pick: remember the whole hand as it looked, to play the full pick animation over the new screen.
     const hand = app.querySelector(".hand");
     if (hand) pickShow = { handHtml: hand.outerHTML, handRect: hand.getBoundingClientRect(), chosen: S.lastPick.i, pid: S.lastPick.pid };
   } else if (newPick) {
-    const el = app.querySelector(".lot .fut, .lot .portrait");
+    // Someone else's pick (or an auction sale): one light card flight is enough, and cheap on phones.
+    const i = S.lastPick.i;
+    const el = app.querySelector(`.hcard[data-v="${i}"] .fut, .hcard[data-v="${i}"] .portrait`) || app.querySelector(".lot .fut, .lot .portrait");
     if (el) flight = { rect: el.getBoundingClientRect(), html: el.outerHTML, pid: S.lastPick.pid };
   }
   // The next hand stays hidden until the pick animation is done, then deals in (no overlap).

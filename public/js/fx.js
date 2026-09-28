@@ -141,8 +141,8 @@ export function countUp(root) {
 
 /* ---------- The pick: chosen card lifts and glows, the rest drop away, it flies into the team ---------- */
 // `handHtml` / `handRect`: the hand as it looked just before the pick (the page has already re-rendered).
-// Timing: lift 260ms, then fly 480ms. PICK_MS is the whole thing; the next hand deals in after it.
-export const PICK_MS = 780;
+// Timing: lift 130ms, then fly 320ms. PICK_MS is the whole thing; the next hand deals in after it.
+export const PICK_MS = 450;
 let current = null;                                   // only one pick animation at a time
 
 function finishCurrent() {
@@ -167,24 +167,40 @@ export function pickAnimation({ handHtml, handRect, chosen, target }) {
   cards.forEach((c, k) => { if (c !== pick) { c.style.animationDelay = k * 25 + "ms"; c.classList.add("pick-away"); } });
   const timers = [];
   current = { stage, timers };
-  if (!pick) { timers.push(setTimeout(finishCurrent, 420)); return; }
+  if (!pick) { timers.push(setTimeout(finishCurrent, 300)); return; }
   pick.classList.add("pick-chosen");
 
   timers.push(setTimeout(() => {
     const from = pick.getBoundingClientRect(), to = target?.getBoundingClientRect();
-    if (!to || !to.width) { pick.classList.add("pick-away"); timers.push(setTimeout(finishCurrent, 400)); return; }
+    if (!to || !to.width) { pick.classList.add("pick-away"); timers.push(setTimeout(finishCurrent, 260)); return; }
     const dx = to.left + to.width / 2 - (from.left + from.width / 2);
     const dy = to.top + to.height / 2 - (from.top + from.height / 2);
     const s = Math.max(0.12, to.width / from.width);
-    pick.style.transition = "transform .48s cubic-bezier(.5,-0.1,.3,1), opacity .48s ease-in";
+    pick.style.transition = "transform .32s cubic-bezier(.45,0,.3,1), opacity .32s ease-in";
     pick.style.transform = `translate3d(${dx}px, ${dy}px, 0) scale(${s}) rotate(${dx > 0 ? 12 : -12}deg)`;
     pick.style.opacity = "0.4";
     timers.push(setTimeout(() => {
       finishCurrent();
       target.classList.remove("pop"); void target.offsetWidth; target.classList.add("pop");
       burst(to.left + to.width / 2, to.top + to.height / 2);
-    }, 480));
-  }, 260));
+    }, 320));
+  }, 130));
+}
+
+/* ---------- Background photo loading ----------
+   Download every card photo of the category once the game starts, a few at a time and only when the
+   phone is idle, so new hands show their photos instantly instead of loading them on the spot. */
+const warmed = new Set();
+export function warmPhotos(files) {
+  const todo = files.filter(f => !warmed.has(f));
+  todo.forEach(f => warmed.add(f));
+  const idle = window.requestIdleCallback || (cb => setTimeout(cb, 120));
+  (function next() {
+    const batch = todo.splice(0, 4);
+    if (!batch.length) return;
+    batch.forEach(f => { const im = new Image(); im.decoding = "async"; im.src = "/images/" + f; });
+    idle(next, { timeout: 800 });
+  })();
 }
 
 // Little sparkle burst where the card lands.

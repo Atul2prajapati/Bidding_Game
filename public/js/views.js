@@ -21,7 +21,7 @@ const ICON = {
 /* ---------- Card art ---------- */
 // A downloaded photo when there is one (see scripts/fetch-images.js), otherwise coloured art with initials.
 const photo = (it, th) => ctx.photos[th.kind]?.[it.n];
-const img = (it, p) => `<img src="/images/${esc(p.file)}" alt="${esc(it.n)}" loading="lazy" decoding="async">`;
+const img = (it, p, lazy = false) => `<img src="/images/${esc(p.file)}" alt="${esc(it.n)}"${lazy ? ' loading="lazy"' : ""} decoding="async">`;
 
 export function portrait(it, th) {
   if (th.kind === "food") return `<div class="portrait food" style="--c1:${th.cats[it.t][1]}">${it.e}</div>`;
@@ -280,7 +280,7 @@ function draftStage() {
     <div class="turn"><div><div class="label">Round ${Math.min(S.round, th.slots)} of ${th.slots} · ${myTurn ? "you have" : esc(p.name) + " has"} <span class="num">$${p.money}</span> to spend</div>${who}</div>
     ${S.ends ? clock(S.turnMs || 1) : ""}</div>
     ${lastPickBanner()}
-    <div class="hand ${ctx.fx.deal ? "deal" : ""} ${ctx.fx.dealLate ? "late" : ""} ${myTurn ? "" : "waiting"}">${cards}</div></div>`;
+    <div class="hand ${ctx.fx.deal && myTurn ? "deal" : ""} ${myTurn ? "" : "waiting"}">${cards}</div></div>`;
 }
 
 // Helps players avoid overpaying: is this price good for the card's rating, and how much can you spend per card?
@@ -374,7 +374,7 @@ function creditsView() {
     const th = Object.values(THEMES).find(t => t.kind === kind);
     const rows = th.items.filter(it => ctx.photos[kind]?.[it.n]).map(it => {
       const p = ctx.photos[kind][it.n];
-      return `<li><span class="ava photo">${img(it, p)}</span><span class="grow"><b>${esc(it.n)}</b><br><small>${esc(p.credit)}</small></span>${p.source ? `<a href="${esc(p.source)}" target="_blank" rel="noopener">Source</a>` : ""}</li>`;
+      return `<li><span class="ava photo">${img(it, p, true)}</span><span class="grow"><b>${esc(it.n)}</b><br><small>${esc(p.credit)}</small></span>${p.source ? `<a href="${esc(p.source)}" target="_blank" rel="noopener">Source</a>` : ""}</li>`;
     }).join("");
     return rows ? `<div class="panel"><h2>${title}</h2><p class="sub">${note}</p><ul class="plist credits">${rows}</ul></div>` : "";
   };

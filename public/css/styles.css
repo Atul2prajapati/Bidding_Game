@@ -804,3 +804,13 @@ button, .hcard, .cat { touch-action: manipulation; }          /* no double-tap z
 .pick-stage .fut { filter: none !important; }
 .pick-stage .hcard .shine, .pick-stage .fut.icon .fut-inner::after, .pick-stage .rar-gold .portrait::before { display: none; }
 .hand.deal .hcard { will-change: transform; }
+
+/* Faster: pick lift and drop, and a quicker deal-in for your new hand */
+.hcard.pick-chosen { animation-duration: .13s; }
+.hcard.pick-away { animation-duration: .24s; }
+.hand.deal .hcard { animation: deal .34s var(--ease) both; }
+.hand.deal .hcard:nth-child(2) { animation-delay: .03s; }
+.hand.deal .hcard:nth-child(3) { animation-delay: .06s; }
+.hand.deal .hcard:nth-child(4) { animation-delay: .09s; }
+.hand.deal .hcard:nth-child(5) { animation-delay: .12s; }
+@keyframes deal { from { transform: translate3d(0, 18px, 0) scale(.94); opacity: 0; } to { transform: none; opacity: 1; } }
