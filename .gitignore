@@ -1,10 +1,8 @@
 node_modules/
 .DS_Store
 
-# Anime art belongs to the studios: keep it out of anything you publish.
-public/images/anime/
-public/images/pokemon/
-public/images/heroes/
+# Note: anime, Pokémon and superhero images are included on purpose (owner's choice).
+# That art belongs to the studios / Nintendo / Marvel / DC; remove it before any store release.
 
 # Build output (Vercel builds this itself)
 dist/
