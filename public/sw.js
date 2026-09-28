@@ -1,7 +1,7 @@
 // Service worker: lets the installed app open instantly and play solo without internet.
 // Pages and code: network first (so updates arrive), falling back to the cached copy offline.
 // Card photos and icons: cache first (they rarely change).
-const CACHE = "hdd-v2";
+const CACHE = "hdd-v3";   // bump to clear everyone's old cache
 const CORE = ["/", "/config.js", "/css/styles.css", "/js/main.js", "/js/views.js", "/js/state.js", "/js/net.js", "/js/fx.js",
   "/shared/themes.js", "/shared/engine.js", "/shared/football-cards.js", "/shared/cricket-cards.js",
   "/images/manifest.json", "/manifest.webmanifest", "/icons/icon-192.png"];
@@ -15,6 +15,12 @@ self.addEventListener("fetch", e => {
   if (e.request.method !== "GET" || url.origin !== location.origin || url.pathname === "/ws" || url.pathname === "/health") return;
   const cacheFirst = url.pathname.startsWith("/images/") || url.pathname.startsWith("/icons/");
   e.respondWith(cacheFirst
-    ? caches.match(e.request).then(hit => hit || fetch(e.request).then(res => { const copy = res.clone(); caches.open(CACHE).then(c => c.put(e.request, copy)); return res; }))
-    : fetch(e.request).then(res => { const copy = res.clone(); caches.open(CACHE).then(c => c.put(e.request, copy)); return res; }).catch(() => caches.match(e.request)));
+    ? caches.match(e.request).then(hit => hit || fetch(e.request).then(res => keep(e.request, res)))
+    : fetch(e.request).then(res => keep(e.request, res)).catch(() => caches.match(e.request)));
 });
+
+// Only keep real successes. Caching a "not found" would hide a photo forever, even after it's added.
+function keep(request, res) {
+  if (res.ok) { const copy = res.clone(); caches.open(CACHE).then(c => c.put(request, copy)); }
+  return res;
+}
